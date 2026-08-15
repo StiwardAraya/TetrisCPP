@@ -28,6 +28,87 @@ private:
 	
 public:
 	
-	TCola() : frente(nullptr), fin(nullptr), tamanno(0){
+	/**
+	* @brief Constructor genérico de la cola.
+	*/
+	TCola() : frente(nullptr), fin(nullptr), tamanno(0){}
 	
+	/**
+	* @brief Destructor de la cola, libera la memoria de todos los nodos.
+	*/
+	~TCola(){
+		Nodo* actual = frente;
+		while(actual){
+			Nodo* auxiliar = actual;
+			actual = actual->siguiente;
+			delete auxiliar;
+		}
+		frente = nullptr;
+		fin = nullptr;
+		tamanno = 0;
+	}
+	
+	/**
+	* @brief Retorna un valor booleano si la cola está vacía o no.
+	*/
+	bool esVacia() const{
+		return !frente && !fin;
+	}
+	
+	/**
+	* @brief Agrega al frente de la cola un nodo con el objeto
+	* recibido.
+	* 
+	* @param obj objeto a almacenar en la cola.
+	* @post Tamanno incrementa en 1.
+	*/
+	void encolar(const T& obj){
+		Nodo* nuevo = new Nodo{obj, nullptr};
+		
+		// Clausula Guardian: Caso de cola vacía.
+		if(esVacia()) { 
+			frente = nuevo;
+			fin = nuevo;
+			tamanno++;
+			return;
+		}
+		
+		fin->siguiente = nuevo;
+		fin = nuevo;
+		tamanno++;
+	}
+	
+	/**
+	* @brief Elimina el elemento de enfrente y lo retorna.
+	* @return Instancia del objeto que se encontraba al frente.
+	* @throw std::runtime_error Si la cola está vacía.
+	* @post Tamanno decrementa en 1.
+	*/
+	T desencolar(){
+		// Clausula Guardian: Caso de cola vacía.
+		if(esVacia()){
+			throw std::runtime_error("La cola está vacía");
+		}
+		
+		T obj = frente->obj;
+		Nodo* auxiliar = frente;
+		frente = frente->siguiente;
+		delete auxiliar;
+		tamanno--;
+		
+		if(!frente){
+			fin = nullptr;
+		}
+		
+		return obj;
+	}
+	
+	// TODO: revisar la eficiencia de este metodo, 
+	T peak(int index){
+		if(esVacia()){
+			throw std::runtime_error("La cola está vacía")
+		}
+		
+		int posicion = 0;
+	}
 };
