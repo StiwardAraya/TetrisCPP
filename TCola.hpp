@@ -6,6 +6,9 @@
 */
 #pragma once
 
+#include <functional>		///< std::funcion
+#include <stdexcept>		///< std::runtime_error
+
 /**
 * @brief Estructura de datos genérica tipo FIFO.
 * @tparam T tipo de dato genérico que la cola va a almacenar.
@@ -20,7 +23,7 @@ private:
 	struct Nodo{
 		T obj;				///< Objeto genérico.
 		Nodo* siguiente;	///< Puntero al nodo siguiente de la cola.
-	}
+	};
 	
 	Nodo* frente;			///< Puntero al nodo de enfrente de la cola.
 	Nodo* fin;				///< Puntero al último nodo que ingresó a la cola.
@@ -35,6 +38,7 @@ public:
 	
 	/**
 	* @brief Destructor de la cola, libera la memoria de todos los nodos.
+	* @post reinicia todos los parámetros de la cola.
 	*/
 	~TCola(){
 		Nodo* actual = frente;
@@ -80,6 +84,7 @@ public:
 	
 	/**
 	* @brief Elimina el elemento de enfrente y lo retorna.
+	* @pre La cola no debe estar vacía
 	* @return Instancia del objeto que se encontraba al frente.
 	* @throw std::runtime_error Si la cola está vacía.
 	* @post Tamanno decrementa en 1.
@@ -103,12 +108,38 @@ public:
 		return obj;
 	}
 	
-	// TODO: revisar la eficiencia de este metodo, 
-	T peak(int index){
+	/**
+	* @brief Devuelve el elemento al frente de la cola.
+	* @pre La cola no debe estar vacía.
+	* @return Objeto genérico al frente de la cola.
+	*/
+	T& verFrente() const{
 		if(esVacia()){
-			throw std::runtime_error("La cola está vacía")
+			throw std::runtime_error("La cola está vacía");
 		}
 		
-		int posicion = 0;
+		return frente->obj;
+	}
+	
+	/**
+	* @brief Retorna el tamaño de la cola.
+	* @return Valor entero que representa el tamaño de la cola.
+	*/
+	int obtenerTamanno() const {
+		return tamanno;
+	}
+	
+	/**
+	* @brief Metodo solo para testing, recorre la lista y ejecuta una acción
+	* sobre cada elemento de la cola.
+	*
+	* @return accion, función lambda a ejecutar en cada elemento.
+	*/
+	void recorrer(std::function<void(const T&)> accion) const {
+		Nodo* actual = frente;
+		while(actual){
+			accion(actual->obj);
+			actual = actual->siguiente;
+		}
 	}
 };
