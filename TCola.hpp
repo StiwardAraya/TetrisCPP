@@ -2,11 +2,10 @@
 * @file TCola.hpp
 * @brief Implementación de una estructura FIFO para el proyecto
 * @author Stiward Araya Calderón
-* @date creado el 15/08/2026
+* @date Creado el 15/08/2026
 */
 #pragma once
 
-#include <functional>		///< std::funcion
 #include <stdexcept>		///< std::runtime_error
 
 /**
@@ -38,7 +37,7 @@ public:
 	
 	/**
 	* @brief Destructor de la cola, libera la memoria de todos los nodos.
-	* @post reinicia todos los parámetros de la cola.
+	* @post Reinicia todos los parámetros de la cola.
 	*/
 	~TCola(){
 		Nodo* actual = frente;
@@ -63,7 +62,7 @@ public:
 	* @brief Agrega al frente de la cola un nodo con el objeto
 	* recibido.
 	* 
-	* @param obj objeto a almacenar en la cola.
+	* @param obj Objeto a almacenar en la cola.
 	* @post Tamanno incrementa en 1.
 	*/
 	void encolar(const T& obj){
@@ -129,17 +128,4 @@ public:
 		return tamanno;
 	}
 	
-	/**
-	* @brief Metodo solo para testing, recorre la lista y ejecuta una acción
-	* sobre cada elemento de la cola.
-	*
-	* @return accion, función lambda a ejecutar en cada elemento.
-	*/
-	void recorrer(std::function<void(const T&)> accion) const {
-		Nodo* actual = frente;
-		while(actual){
-			accion(actual->obj);
-			actual = actual->siguiente;
-		}
-	}
 };
