@@ -68,7 +68,6 @@ public:
 	void encolar(const T& obj){
 		Nodo* nuevo = new Nodo{obj, nullptr};
 		
-		// Clausula Guardian: Caso de cola vacía.
 		if(esVacia()) { 
 			frente = nuevo;
 			fin = nuevo;
@@ -89,7 +88,6 @@ public:
 	* @post Tamanno decrementa en 1.
 	*/
 	T desencolar(){
-		// Clausula Guardian: Caso de cola vacía.
 		if(esVacia()){
 			throw std::runtime_error("La cola está vacía");
 		}

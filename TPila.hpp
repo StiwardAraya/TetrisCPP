@@ -66,7 +66,6 @@ public:
 	void apilar(const T& obj) {
 		Nodo* nuevo = new Nodo{obj, nullptr};
 		
-		//Clausula guardian : Pila vacía
 		if(esVacia()){
 			tope = nuevo;
 			tamanno++;
@@ -86,7 +85,6 @@ public:
 	* @post El tamaño de la pila decrementa en 1.
 	*/
 	T desapilar(){
-		//Clausula guardian: Pila vacía
 		if(esVacia()){
 			throw std::runtime_error("La pila se encuentra vacía");
 		}
