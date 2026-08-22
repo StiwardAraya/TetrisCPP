@@ -62,7 +62,7 @@ public:
 	}
 		
 	/**
-	* @brief Inserta en la cola de la lista doble.
+	* @brief Inserta en la cabeza de la lista doble.
 	* @pre El objeto a insertar no puede ser nulo.
 	* @pre Si la lista está vacía inserta en cabeza y cola.
 	* @throw std::runtime_error Si el objeto es nulo.
@@ -83,8 +83,8 @@ public:
 			return;
 		}
 		
-		cola->siguiente = nuevo;
-		cola = nuevo;
+		nuevo->siguiente = cabeza;
+		cabeza = nuevo;
 		tamanno++;
 	}
 	
