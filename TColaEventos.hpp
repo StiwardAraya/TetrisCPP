@@ -84,7 +84,7 @@ public:
 			tamanno++;
 			return;
 		}
-				   
+		
 		Nodo* actual = frente;
 		Nodo* anterior = nullptr;
 		

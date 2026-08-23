@@ -84,7 +84,9 @@ public:
 		}
 		
 		nuevo->siguiente = cabeza;
+		cabeza->anterior = nuevo;
 		cabeza = nuevo;
+		actual = cabeza;
 		tamanno++;
 	}
 	
@@ -112,7 +114,7 @@ public:
 	*/
 	T retroceder() {
 		if(!hayAnterior()){
-			throw std::runtime_error("No se puede retroceder más o la lista está vacía");
+			throw std::runtime_error("No se puede retroceder mas o la lista esta vacía");
 		}
 		
 		actual = actual->anterior;
@@ -156,7 +158,7 @@ public:
 	*/
 	void reiniciarRecorrido() {
 		if(esVacia()){
-			throw std::runtime_error("La lista está vacía")
+			throw std::runtime_error("La lista está vacía");
 		}
 		
 		actual = cabeza;
@@ -166,21 +168,8 @@ public:
 	* @brief Retorna el tamaño de la lista.
 	* @return Valor entero que representa el tamaño de la lista.
 	*/
-	int obtenerTamanno const () {
+	int obtenerTamanno() const {
 		return tamanno;
 	}
 	
-	// TEST
-	void imprimir() {
-		if(esVacia()){
-			throw std::runtime_error("La lista está vacía");
-		}
-		
-		actual = cabeza;
-		while(actual){
-			std::cout << "[ " << actual->obj << " ]->"; 
-			actual = actual->siguiente;
-		}
-		std::cout << std::endl;
-	}
 };
