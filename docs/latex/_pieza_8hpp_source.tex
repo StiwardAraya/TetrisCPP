@@ -1,0 +1,43 @@
+\doxysection{Pieza.\+hpp}
+\hypertarget{_pieza_8hpp_source}{}\label{_pieza_8hpp_source}\doxymbox{\hyperlink{_pieza_8hpp}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <utility>}\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{_pieza_8hpp_a666648ea0ca81f7fa393aeae0e1d4f07}{TipoPieza}}\ \{\ \doxymbox{\hyperlink{_pieza_8hpp_a666648ea0ca81f7fa393aeae0e1d4f07add7536794b63bf90eccfd37f9b147d7f}{I}},\ \doxymbox{\hyperlink{_pieza_8hpp_a666648ea0ca81f7fa393aeae0e1d4f07af186217753c37b9b9f958d906208506e}{O}},\ \doxymbox{\hyperlink{_pieza_8hpp_a666648ea0ca81f7fa393aeae0e1d4f07ab9ece18c950afbfa6b0fdbfa4ff731d3}{T}},\ \doxymbox{\hyperlink{_pieza_8hpp_a666648ea0ca81f7fa393aeae0e1d4f07a5dbc98dcc983a70728bd082d1a47546e}{S}},\ \doxymbox{\hyperlink{_pieza_8hpp_a666648ea0ca81f7fa393aeae0e1d4f07a21c2e59531c8710156d34a3c30ac81d5}{Z}},\ \doxymbox{\hyperlink{_pieza_8hpp_a666648ea0ca81f7fa393aeae0e1d4f07aff44570aca8241914870afbc310cdb85}{J}},\ \doxymbox{\hyperlink{_pieza_8hpp_a666648ea0ca81f7fa393aeae0e1d4f07ad20caec3b48a1eef164cb4ca81ba2587}{L}}\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_pieza_a38bffe666f6178fcbfb0da1bd7fe3fd0}{Pieza}}\{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_pieza_ab46b275aef52b256a2fc5e98b8bb874d}{FORMAS}}[7][4][4][2];\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \doxymbox{\hyperlink{_pieza_8hpp_a666648ea0ca81f7fa393aeae0e1d4f07}{TipoPieza}}\ \doxymbox{\hyperlink{class_pieza_ae9d4c326cf0cf090b8b3341e56c3a535}{tipo}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_pieza_a9f891cd50d5b58958f46f88e77f780f9}{filaPivote}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_pieza_a1276fdbe7bca12d5767c3beb78a5cecf}{columnaPivote}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_pieza_a6f67264c45808d327ba35e3bd605977e}{orientacionActual}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \doxymbox{\hyperlink{class_pieza_a38bffe666f6178fcbfb0da1bd7fe3fd0}{Pieza}}(\doxymbox{\hyperlink{_pieza_8hpp_a666648ea0ca81f7fa393aeae0e1d4f07}{TipoPieza}}\ tipoInicial);}
+\DoxyCodeLine{00034\ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_pieza_ae800a40bb93fcde56d67221b60c7c0b9}{moverIzquierda}}();}
+\DoxyCodeLine{00039\ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_pieza_a2e041b25423fc8a0d08cde9444f3c94c}{moverDerecha}}();}
+\DoxyCodeLine{00044\ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_pieza_a98c5af1f3a2f503ff3d79a4345f2efd5}{moverAbajo}}();}
+\DoxyCodeLine{00049\ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_pieza_ab9aae599370eaf844af6b414dc28136c}{rotar}}();}
+\DoxyCodeLine{00055\ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ std::vector<std::pair<int,\ int>>\ \doxymbox{\hyperlink{class_pieza_a7f539a310e7964fa316a5e01bf41fe5c}{obtenerCeldasOcupadas}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ std::vector<std::pair<int,\ int>>\ \doxymbox{\hyperlink{class_pieza_a35f8242769416f618fa306c92febb8de}{obtenerCeldasEn}}(\textcolor{keywordtype}{int}\ filaPivoteHipotetica,\ \textcolor{keywordtype}{int}\ columnaPivoteHipotetica,\ \textcolor{keywordtype}{int}\ orientacionHipotetica)\ \textcolor{keyword}{const};\ }
+\DoxyCodeLine{00067\ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \doxymbox{\hyperlink{_pieza_8hpp_a666648ea0ca81f7fa393aeae0e1d4f07}{TipoPieza}}\ \doxymbox{\hyperlink{class_pieza_a5a1caa30f946c99d61cbf86d3c2fa824}{getTipoPieza}}()\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_pieza_af17b457adaaae7e3ea1d68401db690d5}{getFilaPivote}}()\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_pieza_af5ed5b01eb05d687a7e26b6af17027a7}{getColumnaPivote}}()\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_pieza_af0166695cea781123db004fda17b0e34}{getOrientacion}}()\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_pieza_a5d873776f796b26c5a497f7d8000a284}{establecerPosicion}}(\textcolor{keywordtype}{int}\ fila,\ \textcolor{keywordtype}{int}\ columna);\ }
+\DoxyCodeLine{00079\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,544 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Una_Tetris: Referencia de la clase Pieza</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Una_Tetris<span id="projectnumber">&#160;dev-0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pri-attribs">Atributos privados</a> &#124;
+<a href="#pri-static-attribs">Atributos estáticos privados</a> &#124;
+<a href="class_pieza-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle"><div class="title">Referencia de la clase Pieza</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Objeto para representar de forma lógica las piezas del juego.  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_pieza_8hpp_source.html">Pieza.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a38bffe666f6178fcbfb0da1bd7fe3fd0" id="r_a38bffe666f6178fcbfb0da1bd7fe3fd0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a38bffe666f6178fcbfb0da1bd7fe3fd0">Pieza</a> (<a class="el" href="_pieza_8hpp.html#a666648ea0ca81f7fa393aeae0e1d4f07">TipoPieza</a> tipoInicial)</td></tr>
+<tr class="memdesc:a38bffe666f6178fcbfb0da1bd7fe3fd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de la pieza.  <br /></td></tr>
+<tr class="memitem:ae800a40bb93fcde56d67221b60c7c0b9" id="r_ae800a40bb93fcde56d67221b60c7c0b9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae800a40bb93fcde56d67221b60c7c0b9">moverIzquierda</a> ()</td></tr>
+<tr class="memdesc:ae800a40bb93fcde56d67221b60c7c0b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrementa fila pivote en 1.  <br /></td></tr>
+<tr class="memitem:a2e041b25423fc8a0d08cde9444f3c94c" id="r_a2e041b25423fc8a0d08cde9444f3c94c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2e041b25423fc8a0d08cde9444f3c94c">moverDerecha</a> ()</td></tr>
+<tr class="memdesc:a2e041b25423fc8a0d08cde9444f3c94c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Incrementa fila pivote en 1.  <br /></td></tr>
+<tr class="memitem:a98c5af1f3a2f503ff3d79a4345f2efd5" id="r_a98c5af1f3a2f503ff3d79a4345f2efd5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a98c5af1f3a2f503ff3d79a4345f2efd5">moverAbajo</a> ()</td></tr>
+<tr class="memdesc:a98c5af1f3a2f503ff3d79a4345f2efd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrementa columna pivote en 1.  <br /></td></tr>
+<tr class="memitem:ab9aae599370eaf844af6b414dc28136c" id="r_ab9aae599370eaf844af6b414dc28136c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab9aae599370eaf844af6b414dc28136c">rotar</a> ()</td></tr>
+<tr class="memdesc:ab9aae599370eaf844af6b414dc28136c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Avanza orientacion actual en 1.  <br /></td></tr>
+<tr class="memitem:a7f539a310e7964fa316a5e01bf41fe5c" id="r_a7f539a310e7964fa316a5e01bf41fe5c"><td class="memItemLeft">std::vector&lt; std::pair&lt; int, int &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a7f539a310e7964fa316a5e01bf41fe5c">obtenerCeldasOcupadas</a> () const</td></tr>
+<tr class="memdesc:a7f539a310e7964fa316a5e01bf41fe5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna una lista con las coordenadas de cada celda ocupada por la pieza.  <br /></td></tr>
+<tr class="memitem:a35f8242769416f618fa306c92febb8de" id="r_a35f8242769416f618fa306c92febb8de"><td class="memItemLeft">std::vector&lt; std::pair&lt; int, int &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a35f8242769416f618fa306c92febb8de">obtenerCeldasEn</a> (int filaPivoteHipotetica, int columnaPivoteHipotetica, int orientacionHipotetica) const</td></tr>
+<tr class="memdesc:a35f8242769416f618fa306c92febb8de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula qué celdas ocuparía la pieza si estuviera en una posición/orientación hipotética.  <br /></td></tr>
+<tr class="memitem:a5a1caa30f946c99d61cbf86d3c2fa824" id="r_a5a1caa30f946c99d61cbf86d3c2fa824"><td class="memItemLeft"><a class="el" href="_pieza_8hpp.html#a666648ea0ca81f7fa393aeae0e1d4f07">TipoPieza</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5a1caa30f946c99d61cbf86d3c2fa824">getTipoPieza</a> () const</td></tr>
+<tr class="memdesc:a5a1caa30f946c99d61cbf86d3c2fa824"><td class="mdescLeft">&#160;</td><td class="mdescRight">GETTER <a class="el" href="_pieza_8hpp.html#a666648ea0ca81f7fa393aeae0e1d4f07" title="enum para el manejo de tipos de piezas, 7 tipos constantes">TipoPieza</a>.  <br /></td></tr>
+<tr class="memitem:af17b457adaaae7e3ea1d68401db690d5" id="r_af17b457adaaae7e3ea1d68401db690d5"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#af17b457adaaae7e3ea1d68401db690d5">getFilaPivote</a> () const</td></tr>
+<tr class="memdesc:af17b457adaaae7e3ea1d68401db690d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">GETTER filaPivote.  <br /></td></tr>
+<tr class="memitem:af5ed5b01eb05d687a7e26b6af17027a7" id="r_af5ed5b01eb05d687a7e26b6af17027a7"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#af5ed5b01eb05d687a7e26b6af17027a7">getColumnaPivote</a> () const</td></tr>
+<tr class="memdesc:af5ed5b01eb05d687a7e26b6af17027a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">GETTER columnaPivote.  <br /></td></tr>
+<tr class="memitem:af0166695cea781123db004fda17b0e34" id="r_af0166695cea781123db004fda17b0e34"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#af0166695cea781123db004fda17b0e34">getOrientacion</a> () const</td></tr>
+<tr class="memdesc:af0166695cea781123db004fda17b0e34"><td class="mdescLeft">&#160;</td><td class="mdescRight">GETTER orientacion.  <br /></td></tr>
+<tr class="memitem:a5d873776f796b26c5a497f7d8000a284" id="r_a5d873776f796b26c5a497f7d8000a284"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5d873776f796b26c5a497f7d8000a284">establecerPosicion</a> (int fila, int columna)</td></tr>
+<tr class="memdesc:a5d873776f796b26c5a497f7d8000a284"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fuerza una pieza en una posicion especifica.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:ae9d4c326cf0cf090b8b3341e56c3a535" id="r_ae9d4c326cf0cf090b8b3341e56c3a535"><td class="memItemLeft"><a class="el" href="_pieza_8hpp.html#a666648ea0ca81f7fa393aeae0e1d4f07">TipoPieza</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae9d4c326cf0cf090b8b3341e56c3a535">tipo</a></td></tr>
+<tr class="memdesc:ae9d4c326cf0cf090b8b3341e56c3a535"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica que tipo de pieza es.  <br /></td></tr>
+<tr class="memitem:a9f891cd50d5b58958f46f88e77f780f9" id="r_a9f891cd50d5b58958f46f88e77f780f9"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a9f891cd50d5b58958f46f88e77f780f9">filaPivote</a></td></tr>
+<tr class="memdesc:a9f891cd50d5b58958f46f88e77f780f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Punto de referencia fijo horizontal de la pieza.  <br /></td></tr>
+<tr class="memitem:a1276fdbe7bca12d5767c3beb78a5cecf" id="r_a1276fdbe7bca12d5767c3beb78a5cecf"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a1276fdbe7bca12d5767c3beb78a5cecf">columnaPivote</a></td></tr>
+<tr class="memdesc:a1276fdbe7bca12d5767c3beb78a5cecf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Punto de referencia fijo vertical de la pieza.  <br /></td></tr>
+<tr class="memitem:a6f67264c45808d327ba35e3bd605977e" id="r_a6f67264c45808d327ba35e3bd605977e"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a6f67264c45808d327ba35e3bd605977e">orientacionActual</a></td></tr>
+<tr class="memdesc:a6f67264c45808d327ba35e3bd605977e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Orientación actual de la pieza (0 a 3).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Atributos estáticos privados</h2></td></tr>
+<tr class="memitem:ab46b275aef52b256a2fc5e98b8bb874d" id="r_ab46b275aef52b256a2fc5e98b8bb874d"><td class="memItemLeft">static const int&#160;</td><td class="memItemRight"><a class="el" href="#ab46b275aef52b256a2fc5e98b8bb874d">FORMAS</a> [7][4][4][2]</td></tr>
+<tr class="memdesc:ab46b275aef52b256a2fc5e98b8bb874d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tabla de posiciones precalculadas: [tipo][orientacion][bloque][fila,columna].  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Objeto para representar de forma lógica las piezas del juego. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentación de constructores y destructores</h2>
+<a id="a38bffe666f6178fcbfb0da1bd7fe3fd0" name="a38bffe666f6178fcbfb0da1bd7fe3fd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38bffe666f6178fcbfb0da1bd7fe3fd0">&#9670;&#160;</a></span>Pieza()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Pieza::Pieza </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_pieza_8hpp.html#a666648ea0ca81f7fa393aeae0e1d4f07">TipoPieza</a></td>          <td class="paramname"><span class="paramname"><em>tipoInicial</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor de la pieza. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tipoInicial</td><td>tipo de pieza que construirá la pieza instanciada. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="a5d873776f796b26c5a497f7d8000a284" name="a5d873776f796b26c5a497f7d8000a284"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d873776f796b26c5a497f7d8000a284">&#9670;&#160;</a></span>establecerPosicion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pieza::establecerPosicion </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fila</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>columna</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fuerza una pieza en una posicion especifica. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fila</td><td>posicion horizontal </td></tr>
+    <tr><td class="paramname">columna</td><td>posicion vertical </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af5ed5b01eb05d687a7e26b6af17027a7" name="af5ed5b01eb05d687a7e26b6af17027a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5ed5b01eb05d687a7e26b6af17027a7">&#9670;&#160;</a></span>getColumnaPivote()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Pieza::getColumnaPivote </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GETTER columnaPivote. </p>
+
+</div>
+</div>
+<a id="af17b457adaaae7e3ea1d68401db690d5" name="af17b457adaaae7e3ea1d68401db690d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af17b457adaaae7e3ea1d68401db690d5">&#9670;&#160;</a></span>getFilaPivote()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Pieza::getFilaPivote </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GETTER filaPivote. </p>
+
+</div>
+</div>
+<a id="af0166695cea781123db004fda17b0e34" name="af0166695cea781123db004fda17b0e34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0166695cea781123db004fda17b0e34">&#9670;&#160;</a></span>getOrientacion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Pieza::getOrientacion </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GETTER orientacion. </p>
+
+</div>
+</div>
+<a id="a5a1caa30f946c99d61cbf86d3c2fa824" name="a5a1caa30f946c99d61cbf86d3c2fa824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a1caa30f946c99d61cbf86d3c2fa824">&#9670;&#160;</a></span>getTipoPieza()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_pieza_8hpp.html#a666648ea0ca81f7fa393aeae0e1d4f07">TipoPieza</a> Pieza::getTipoPieza </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GETTER <a class="el" href="_pieza_8hpp.html#a666648ea0ca81f7fa393aeae0e1d4f07" title="enum para el manejo de tipos de piezas, 7 tipos constantes">TipoPieza</a>. </p>
+
+</div>
+</div>
+<a id="a98c5af1f3a2f503ff3d79a4345f2efd5" name="a98c5af1f3a2f503ff3d79a4345f2efd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98c5af1f3a2f503ff3d79a4345f2efd5">&#9670;&#160;</a></span>moverAbajo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pieza::moverAbajo </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Decrementa columna pivote en 1. </p>
+
+</div>
+</div>
+<a id="a2e041b25423fc8a0d08cde9444f3c94c" name="a2e041b25423fc8a0d08cde9444f3c94c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e041b25423fc8a0d08cde9444f3c94c">&#9670;&#160;</a></span>moverDerecha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pieza::moverDerecha </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Incrementa fila pivote en 1. </p>
+
+</div>
+</div>
+<a id="ae800a40bb93fcde56d67221b60c7c0b9" name="ae800a40bb93fcde56d67221b60c7c0b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae800a40bb93fcde56d67221b60c7c0b9">&#9670;&#160;</a></span>moverIzquierda()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pieza::moverIzquierda </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Decrementa fila pivote en 1. </p>
+
+</div>
+</div>
+<a id="a35f8242769416f618fa306c92febb8de" name="a35f8242769416f618fa306c92febb8de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35f8242769416f618fa306c92febb8de">&#9670;&#160;</a></span>obtenerCeldasEn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::pair&lt; int, int &gt; &gt; Pieza::obtenerCeldasEn </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>filaPivoteHipotetica</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>columnaPivoteHipotetica</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>orientacionHipotetica</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcula qué celdas ocuparía la pieza si estuviera en una posición/orientación hipotética. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Vector de pares, cada par representa la fila y columna que hipoteticamente ocuparia la pieza. </dd></dl>
+
+</div>
+</div>
+<a id="a7f539a310e7964fa316a5e01bf41fe5c" name="a7f539a310e7964fa316a5e01bf41fe5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f539a310e7964fa316a5e01bf41fe5c">&#9670;&#160;</a></span>obtenerCeldasOcupadas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::pair&lt; int, int &gt; &gt; Pieza::obtenerCeldasOcupadas </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna una lista con las coordenadas de cada celda ocupada por la pieza. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Vector de pares, cada par representa la fila y columna de la celda ocupada por la pieza. </dd></dl>
+
+</div>
+</div>
+<a id="ab9aae599370eaf844af6b414dc28136c" name="ab9aae599370eaf844af6b414dc28136c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9aae599370eaf844af6b414dc28136c">&#9670;&#160;</a></span>rotar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pieza::rotar </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Avanza orientacion actual en 1. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Si se encuentra en 3 regresa a 0 </dd></dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="a1276fdbe7bca12d5767c3beb78a5cecf" name="a1276fdbe7bca12d5767c3beb78a5cecf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1276fdbe7bca12d5767c3beb78a5cecf">&#9670;&#160;</a></span>columnaPivote</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Pieza::columnaPivote</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Punto de referencia fijo vertical de la pieza. </p>
+
+</div>
+</div>
+<a id="a9f891cd50d5b58958f46f88e77f780f9" name="a9f891cd50d5b58958f46f88e77f780f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f891cd50d5b58958f46f88e77f780f9">&#9670;&#160;</a></span>filaPivote</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Pieza::filaPivote</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Punto de referencia fijo horizontal de la pieza. </p>
+
+</div>
+</div>
+<a id="ab46b275aef52b256a2fc5e98b8bb874d" name="ab46b275aef52b256a2fc5e98b8bb874d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab46b275aef52b256a2fc5e98b8bb874d">&#9670;&#160;</a></span>FORMAS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Pieza::FORMAS[7][4][4][2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tabla de posiciones precalculadas: [tipo][orientacion][bloque][fila,columna]. </p>
+
+</div>
+</div>
+<a id="a6f67264c45808d327ba35e3bd605977e" name="a6f67264c45808d327ba35e3bd605977e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f67264c45808d327ba35e3bd605977e">&#9670;&#160;</a></span>orientacionActual</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Pieza::orientacionActual</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Orientación actual de la pieza (0 a 3). </p>
+
+</div>
+</div>
+<a id="ae9d4c326cf0cf090b8b3341e56c3a535" name="ae9d4c326cf0cf090b8b3341e56c3a535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9d4c326cf0cf090b8b3341e56c3a535">&#9670;&#160;</a></span>tipo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_pieza_8hpp.html#a666648ea0ca81f7fa393aeae0e1d4f07">TipoPieza</a> Pieza::tipo</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indica que tipo de pieza es. </p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada del siguiente archivo:<ul>
+<li><a class="el" href="_pieza_8hpp_source.html">Pieza.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

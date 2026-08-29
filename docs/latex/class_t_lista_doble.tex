@@ -1,0 +1,314 @@
+\doxysection{Referencia de la plantilla de la clase TLista\+Doble\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\hypertarget{class_t_lista_doble}{}\label{class_t_lista_doble}\index{TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}}
+
+
+\texorpdfstring{$<$}{<} std::\+runtime\+\_\+error  
+
+
+
+
+{\ttfamily \+\#include $<$TLista\+Doble.\+hpp$>$}
+
+\doxysubsubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_t_lista_doble_1_1_nodo}{Nodo}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_t_lista_doble_1_1_nodo}{Nodo} interno de la lista, tiene un objeto genérico, un puntero al nodo siguiente y un puntero al anterior. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_t_lista_doble_af9b27050b62d25be417ba7309d010c80}{TLista\+Doble}} ()
+\begin{DoxyCompactList}\small\item\em Constructor genérico de la lista doblemente enlazada. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_t_lista_doble_a30ef7cb29acd534cda68e38d5395fb3a}{\texorpdfstring{$\sim$}{\string~}\+TLista\+Doble}} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la lista, libera la memoria de todos los nodos. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_t_lista_doble_ae259b6c3aeaaa1b1078770e1d154f32c}{es\+Vacia}} () const
+\begin{DoxyCompactList}\small\item\em Retorna un valor booleano si la lista está vacía o no. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_lista_doble_a1ce31b153f4a1c89f7010ceb91ccb118}{insertar}} (const T \&obj)
+\begin{DoxyCompactList}\small\item\em Inserta en la cabeza de la lista doble. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_t_lista_doble_ae90de945fc98dad23d25d4ca905305be}{hay\+Anterior}} () const
+\begin{DoxyCompactList}\small\item\em Retorna un valor booleano si el anterior del indice no es nulo. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_t_lista_doble_a25d879972e700bf1efaf1a3a52825033}{hay\+Siguiente}} () const
+\begin{DoxyCompactList}\small\item\em Retorna un valor booleano si el siguiente del indice no es nulo. \end{DoxyCompactList}\item 
+T \doxymbox{\hyperlink{class_t_lista_doble_a285c7834c20e3ec9dbc477f010f9b485}{retroceder}} ()
+\begin{DoxyCompactList}\small\item\em Mueve el indice al nodo anterior y retorna su objeto almacenado. \end{DoxyCompactList}\item 
+T \doxymbox{\hyperlink{class_t_lista_doble_a6a77dd9de695f419bb2db2edbb12b260}{avanzar}} ()
+\begin{DoxyCompactList}\small\item\em Mueve el indice al nodo siguiente y retorna su objeto almacenado. \end{DoxyCompactList}\item 
+const T \& \doxymbox{\hyperlink{class_t_lista_doble_aae49cd75a7aa210f83116d2b116a9115}{ver\+Actual}} () const
+\begin{DoxyCompactList}\small\item\em Retorna el objeto que se encuentra actualmente en el indice de la lista. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_lista_doble_ac58810078c938213c203cd45a2204855}{reiniciar\+Recorrido}} ()
+\begin{DoxyCompactList}\small\item\em Reinicia el indice de la lista. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_t_lista_doble_a74959d51fde994b9f28d68278cc8738f}{obtener\+Tamanno}} () const
+\begin{DoxyCompactList}\small\item\em Retorna el tamaño de la lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_t_lista_doble_1_1_nodo}{Nodo}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_lista_doble_a0e71c05ecc9239cb3897733a084c9cbc}{cabeza}}
+\begin{DoxyCompactList}\small\item\em Puntero al inicio de la lista. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_t_lista_doble_1_1_nodo}{Nodo}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_lista_doble_ab2b0253be0f607f46ede9fa0d1b34bf1}{cola}}
+\begin{DoxyCompactList}\small\item\em Puntero al final de la lista. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_t_lista_doble_1_1_nodo}{Nodo}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_lista_doble_a5c569905bc85438daf350c88f6c22c65}{actual}}
+\begin{DoxyCompactList}\small\item\em Puntero indice a una posición de la lista. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_t_lista_doble_a85e0cec0991bd547412b7feb6ccd4223}{tamanno}}
+\begin{DoxyCompactList}\small\item\em Cantidad de elementos en la lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\subsubsection*{template$<$typename T$>$\newline
+class TLista\+Doble$<$ T $>$}
+\texorpdfstring{$<$}{<} std::\+runtime\+\_\+error 
+
+Estructura de datos doblemente enlazada. 
+\begin{DoxyTemplParams}{Parámetros de plantilla}
+{\em T} & tipo de dato genérico que la cola va a almacenar. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\label{class_t_lista_doble_doc-constructors}
+\Hypertarget{class_t_lista_doble_doc-constructors}
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{class_t_lista_doble_af9b27050b62d25be417ba7309d010c80}\index{TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}!TListaDoble@{TListaDoble}}
+\index{TListaDoble@{TListaDoble}!TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{TListaDoble()}{TListaDoble()}}
+{\footnotesize\ttfamily \label{class_t_lista_doble_af9b27050b62d25be417ba7309d010c80} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{class_t_lista_doble}{TLista\+Doble}}$<$ T $>$::\+\+TLista\+Doble (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor genérico de la lista doblemente enlazada. 
+
+\Hypertarget{class_t_lista_doble_a30ef7cb29acd534cda68e38d5395fb3a}\index{TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}!````~TListaDoble@{\texorpdfstring{$\sim$}{\string~}TListaDoble}}
+\index{````~TListaDoble@{\texorpdfstring{$\sim$}{\string~}TListaDoble}!TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}TListaDoble()}{\string~TListaDoble()}}
+{\footnotesize\ttfamily \label{class_t_lista_doble_a30ef7cb29acd534cda68e38d5395fb3a} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{class_t_lista_doble}{TLista\+Doble}}$<$ T $>$::\+\texorpdfstring{$\sim$}{\string~}\doxymbox{\hyperlink{class_t_lista_doble}{TLista\+Doble}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor de la lista, libera la memoria de todos los nodos. 
+
+\begin{DoxyPostcond}{Postcondición}
+Reinicia todos los parámetros de la lista. 
+\end{DoxyPostcond}
+
+
+\label{class_t_lista_doble_doc-func-members}
+\Hypertarget{class_t_lista_doble_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_t_lista_doble_a6a77dd9de695f419bb2db2edbb12b260}\index{TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}!avanzar@{avanzar}}
+\index{avanzar@{avanzar}!TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{avanzar()}{avanzar()}}
+{\footnotesize\ttfamily \label{class_t_lista_doble_a6a77dd9de695f419bb2db2edbb12b260} 
+template$<$typename T$>$ \\
+T \doxymbox{\hyperlink{class_t_lista_doble}{TLista\+Doble}}$<$ T $>$::\+avanzar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mueve el indice al nodo siguiente y retorna su objeto almacenado. 
+
+\begin{DoxyPrecond}{Precondición}
+El siguiente del indice no puede ser nulo. 
+\end{DoxyPrecond}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std::\+runtime\+\_\+error} & Si el siguiente al indice es nulo. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Devuelve}
+Instancia del objeto almacenado en el nodo siguiente al indice. 
+\end{DoxyReturn}
+\Hypertarget{class_t_lista_doble_ae259b6c3aeaaa1b1078770e1d154f32c}\index{TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}!esVacia@{esVacia}}
+\index{esVacia@{esVacia}!TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{esVacia()}{esVacia()}}
+{\footnotesize\ttfamily \label{class_t_lista_doble_ae259b6c3aeaaa1b1078770e1d154f32c} 
+template$<$typename T$>$ \\
+bool \doxymbox{\hyperlink{class_t_lista_doble}{TLista\+Doble}}$<$ T $>$::\+es\+Vacia (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna un valor booleano si la lista está vacía o no. 
+
+\Hypertarget{class_t_lista_doble_ae90de945fc98dad23d25d4ca905305be}\index{TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}!hayAnterior@{hayAnterior}}
+\index{hayAnterior@{hayAnterior}!TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{hayAnterior()}{hayAnterior()}}
+{\footnotesize\ttfamily \label{class_t_lista_doble_ae90de945fc98dad23d25d4ca905305be} 
+template$<$typename T$>$ \\
+bool \doxymbox{\hyperlink{class_t_lista_doble}{TLista\+Doble}}$<$ T $>$::\+hay\+Anterior (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna un valor booleano si el anterior del indice no es nulo. 
+
+\Hypertarget{class_t_lista_doble_a25d879972e700bf1efaf1a3a52825033}\index{TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}!haySiguiente@{haySiguiente}}
+\index{haySiguiente@{haySiguiente}!TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{haySiguiente()}{haySiguiente()}}
+{\footnotesize\ttfamily \label{class_t_lista_doble_a25d879972e700bf1efaf1a3a52825033} 
+template$<$typename T$>$ \\
+bool \doxymbox{\hyperlink{class_t_lista_doble}{TLista\+Doble}}$<$ T $>$::\+hay\+Siguiente (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna un valor booleano si el siguiente del indice no es nulo. 
+
+\Hypertarget{class_t_lista_doble_a1ce31b153f4a1c89f7010ceb91ccb118}\index{TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}!insertar@{insertar}}
+\index{insertar@{insertar}!TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insertar()}{insertar()}}
+{\footnotesize\ttfamily \label{class_t_lista_doble_a1ce31b153f4a1c89f7010ceb91ccb118} 
+template$<$typename T$>$ \\
+void \doxymbox{\hyperlink{class_t_lista_doble}{TLista\+Doble}}$<$ T $>$::\+insertar (\begin{DoxyParamCaption}\item[{const T \&}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserta en la cabeza de la lista doble. 
+
+\begin{DoxyPrecond}{Precondición}
+El objeto a insertar no puede ser nulo. 
+
+Si la lista está vacía inserta en cabeza y cola. 
+\end{DoxyPrecond}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std::\+runtime\+\_\+error} & Si el objeto es nulo. \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parámetros}
+{\em obj} & Objeto de tipo genérico a almacenar en la lista. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondición}
+Tamanno incrementa en 1. 
+\end{DoxyPostcond}
+\Hypertarget{class_t_lista_doble_a74959d51fde994b9f28d68278cc8738f}\index{TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}!obtenerTamanno@{obtenerTamanno}}
+\index{obtenerTamanno@{obtenerTamanno}!TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{obtenerTamanno()}{obtenerTamanno()}}
+{\footnotesize\ttfamily \label{class_t_lista_doble_a74959d51fde994b9f28d68278cc8738f} 
+template$<$typename T$>$ \\
+int \doxymbox{\hyperlink{class_t_lista_doble}{TLista\+Doble}}$<$ T $>$::\+obtener\+Tamanno (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna el tamaño de la lista. 
+
+\begin{DoxyReturn}{Devuelve}
+Valor entero que representa el tamaño de la lista. 
+\end{DoxyReturn}
+\Hypertarget{class_t_lista_doble_ac58810078c938213c203cd45a2204855}\index{TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}!reiniciarRecorrido@{reiniciarRecorrido}}
+\index{reiniciarRecorrido@{reiniciarRecorrido}!TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reiniciarRecorrido()}{reiniciarRecorrido()}}
+{\footnotesize\ttfamily \label{class_t_lista_doble_ac58810078c938213c203cd45a2204855} 
+template$<$typename T$>$ \\
+void \doxymbox{\hyperlink{class_t_lista_doble}{TLista\+Doble}}$<$ T $>$::\+reiniciar\+Recorrido (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reinicia el indice de la lista. 
+
+\begin{DoxyPrecond}{Precondición}
+La lista no puede estar vacía. 
+\end{DoxyPrecond}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std::\+runtime\+\_\+error} & Si la lista está vacía. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_t_lista_doble_a285c7834c20e3ec9dbc477f010f9b485}\index{TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}!retroceder@{retroceder}}
+\index{retroceder@{retroceder}!TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{retroceder()}{retroceder()}}
+{\footnotesize\ttfamily \label{class_t_lista_doble_a285c7834c20e3ec9dbc477f010f9b485} 
+template$<$typename T$>$ \\
+T \doxymbox{\hyperlink{class_t_lista_doble}{TLista\+Doble}}$<$ T $>$::\+retroceder (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mueve el indice al nodo anterior y retorna su objeto almacenado. 
+
+\begin{DoxyPrecond}{Precondición}
+El anterior del indice no puede ser nulo. 
+\end{DoxyPrecond}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std::\+runtime\+\_\+error} & Si el anterior al indice es nulo. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Devuelve}
+Instancia del objeto almacenado en el nodo anterior al indice. 
+\end{DoxyReturn}
+\Hypertarget{class_t_lista_doble_aae49cd75a7aa210f83116d2b116a9115}\index{TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}!verActual@{verActual}}
+\index{verActual@{verActual}!TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{verActual()}{verActual()}}
+{\footnotesize\ttfamily \label{class_t_lista_doble_aae49cd75a7aa210f83116d2b116a9115} 
+template$<$typename T$>$ \\
+const T \& \doxymbox{\hyperlink{class_t_lista_doble}{TLista\+Doble}}$<$ T $>$::\+ver\+Actual (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna el objeto que se encuentra actualmente en el indice de la lista. 
+
+\begin{DoxyPrecond}{Precondición}
+La lista no debe estar vacía. 
+\end{DoxyPrecond}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std::\+runtime\+\_\+error} & Si la lista está vacía. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Devuelve}
+Instancia del objeto correspondiente al indice de la lista. 
+\end{DoxyReturn}
+
+
+\label{class_t_lista_doble_doc-variable-members}
+\Hypertarget{class_t_lista_doble_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{class_t_lista_doble_a5c569905bc85438daf350c88f6c22c65}\index{TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}!actual@{actual}}
+\index{actual@{actual}!TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{actual}{actual}}
+{\footnotesize\ttfamily \label{class_t_lista_doble_a5c569905bc85438daf350c88f6c22c65} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{struct_t_lista_doble_1_1_nodo}{Nodo}}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_lista_doble}{TLista\+Doble}}$<$ T $>$::\+actual\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Puntero indice a una posición de la lista. 
+
+\Hypertarget{class_t_lista_doble_a0e71c05ecc9239cb3897733a084c9cbc}\index{TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}!cabeza@{cabeza}}
+\index{cabeza@{cabeza}!TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{cabeza}{cabeza}}
+{\footnotesize\ttfamily \label{class_t_lista_doble_a0e71c05ecc9239cb3897733a084c9cbc} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{struct_t_lista_doble_1_1_nodo}{Nodo}}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_lista_doble}{TLista\+Doble}}$<$ T $>$::\+cabeza\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Puntero al inicio de la lista. 
+
+\Hypertarget{class_t_lista_doble_ab2b0253be0f607f46ede9fa0d1b34bf1}\index{TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}!cola@{cola}}
+\index{cola@{cola}!TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{cola}{cola}}
+{\footnotesize\ttfamily \label{class_t_lista_doble_ab2b0253be0f607f46ede9fa0d1b34bf1} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{struct_t_lista_doble_1_1_nodo}{Nodo}}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_lista_doble}{TLista\+Doble}}$<$ T $>$::\+cola\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Puntero al final de la lista. 
+
+\Hypertarget{class_t_lista_doble_a85e0cec0991bd547412b7feb6ccd4223}\index{TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}!tamanno@{tamanno}}
+\index{tamanno@{tamanno}!TListaDoble$<$ T $>$@{TListaDoble$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tamanno}{tamanno}}
+{\footnotesize\ttfamily \label{class_t_lista_doble_a85e0cec0991bd547412b7feb6ccd4223} 
+template$<$typename T$>$ \\
+int \doxymbox{\hyperlink{class_t_lista_doble}{TLista\+Doble}}$<$ T $>$::\+tamanno\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Cantidad de elementos en la lista. 
+
+
+
+La documentación de esta clase está generada del siguiente archivo:\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_t_lista_doble_8hpp}{TLista\+Doble.\+hpp}}\end{DoxyCompactItemize}

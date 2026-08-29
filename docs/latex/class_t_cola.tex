@@ -1,0 +1,218 @@
+\doxysection{Referencia de la plantilla de la clase TCola\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\hypertarget{class_t_cola}{}\label{class_t_cola}\index{TCola$<$ T $>$@{TCola$<$ T $>$}}
+
+
+\texorpdfstring{$<$}{<} std::\+runtime\+\_\+error  
+
+
+
+
+{\ttfamily \+\#include $<$TCola.\+hpp$>$}
+
+\doxysubsubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_t_cola_1_1_nodo}{Nodo}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_t_cola_1_1_nodo}{Nodo} interno de la cola, contiene un dato y un puntero al nodo siguiente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_t_cola_a06545d104d2dd9d6bd6bfcd4f6d03bc2}{TCola}} ()
+\begin{DoxyCompactList}\small\item\em Constructor genérico de la cola. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_t_cola_ace75a39f47ca96fe56de1af55c54cf78}{\texorpdfstring{$\sim$}{\string~}\+TCola}} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la cola, libera la memoria de todos los nodos. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_t_cola_a1da1ebe1721f664dbda45bafebca92a9}{es\+Vacia}} () const
+\begin{DoxyCompactList}\small\item\em Retorna un valor booleano si la cola está vacía o no. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_cola_a0a81ef3adbecd86016736c8a33def7d1}{encolar}} (const T \&obj)
+\begin{DoxyCompactList}\small\item\em Agrega al frente de la cola un nodo con el objeto recibido. \end{DoxyCompactList}\item 
+T \doxymbox{\hyperlink{class_t_cola_a675df1a4ae131f46c1af7afd4fac1287}{desencolar}} ()
+\begin{DoxyCompactList}\small\item\em Elimina el elemento de enfrente y lo retorna. \end{DoxyCompactList}\item 
+T \& \doxymbox{\hyperlink{class_t_cola_a54f13768c2816d96a4a6afc107ac1591}{ver\+Frente}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el elemento al frente de la cola. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_t_cola_ac5af12393030355383026ce1e4641ee7}{obtener\+Tamanno}} () const
+\begin{DoxyCompactList}\small\item\em Retorna el tamaño de la cola. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_t_cola_1_1_nodo}{Nodo}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_cola_a90cd899155615ce4c2476da840883cfa}{frente}}
+\begin{DoxyCompactList}\small\item\em Puntero al nodo de enfrente de la cola. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_t_cola_1_1_nodo}{Nodo}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_cola_a5416a4796bdf534d767e4b152c083094}{fin}}
+\begin{DoxyCompactList}\small\item\em Puntero al último nodo que ingresó a la cola. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_t_cola_a483919fc926182bd9a9ab46b6a5969a3}{tamanno}}
+\begin{DoxyCompactList}\small\item\em Tamaño de la cola. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\subsubsection*{template$<$typename T$>$\newline
+class TCola$<$ T $>$}
+\texorpdfstring{$<$}{<} std::\+runtime\+\_\+error 
+
+Estructura de datos genérica tipo FIFO. 
+\begin{DoxyTemplParams}{Parámetros de plantilla}
+{\em T} & tipo de dato genérico que la cola va a almacenar. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\label{class_t_cola_doc-constructors}
+\Hypertarget{class_t_cola_doc-constructors}
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{class_t_cola_a06545d104d2dd9d6bd6bfcd4f6d03bc2}\index{TCola$<$ T $>$@{TCola$<$ T $>$}!TCola@{TCola}}
+\index{TCola@{TCola}!TCola$<$ T $>$@{TCola$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{TCola()}{TCola()}}
+{\footnotesize\ttfamily \label{class_t_cola_a06545d104d2dd9d6bd6bfcd4f6d03bc2} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{class_t_cola}{TCola}}$<$ T $>$::\+\+TCola (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor genérico de la cola. 
+
+\Hypertarget{class_t_cola_ace75a39f47ca96fe56de1af55c54cf78}\index{TCola$<$ T $>$@{TCola$<$ T $>$}!````~TCola@{\texorpdfstring{$\sim$}{\string~}TCola}}
+\index{````~TCola@{\texorpdfstring{$\sim$}{\string~}TCola}!TCola$<$ T $>$@{TCola$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}TCola()}{\string~TCola()}}
+{\footnotesize\ttfamily \label{class_t_cola_ace75a39f47ca96fe56de1af55c54cf78} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{class_t_cola}{TCola}}$<$ T $>$::\+\texorpdfstring{$\sim$}{\string~}\doxymbox{\hyperlink{class_t_cola}{TCola}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor de la cola, libera la memoria de todos los nodos. 
+
+\begin{DoxyPostcond}{Postcondición}
+Reinicia todos los parámetros de la cola. 
+\end{DoxyPostcond}
+
+
+\label{class_t_cola_doc-func-members}
+\Hypertarget{class_t_cola_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_t_cola_a675df1a4ae131f46c1af7afd4fac1287}\index{TCola$<$ T $>$@{TCola$<$ T $>$}!desencolar@{desencolar}}
+\index{desencolar@{desencolar}!TCola$<$ T $>$@{TCola$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{desencolar()}{desencolar()}}
+{\footnotesize\ttfamily \label{class_t_cola_a675df1a4ae131f46c1af7afd4fac1287} 
+template$<$typename T$>$ \\
+T \doxymbox{\hyperlink{class_t_cola}{TCola}}$<$ T $>$::\+desencolar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Elimina el elemento de enfrente y lo retorna. 
+
+\begin{DoxyPrecond}{Precondición}
+La cola no debe estar vacía 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Devuelve}
+Instancia del objeto que se encontraba al frente. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std::\+runtime\+\_\+error} & Si la cola está vacía. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyPostcond}{Postcondición}
+Tamanno decrementa en 1. 
+\end{DoxyPostcond}
+\Hypertarget{class_t_cola_a0a81ef3adbecd86016736c8a33def7d1}\index{TCola$<$ T $>$@{TCola$<$ T $>$}!encolar@{encolar}}
+\index{encolar@{encolar}!TCola$<$ T $>$@{TCola$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{encolar()}{encolar()}}
+{\footnotesize\ttfamily \label{class_t_cola_a0a81ef3adbecd86016736c8a33def7d1} 
+template$<$typename T$>$ \\
+void \doxymbox{\hyperlink{class_t_cola}{TCola}}$<$ T $>$::\+encolar (\begin{DoxyParamCaption}\item[{const T \&}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Agrega al frente de la cola un nodo con el objeto recibido. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em obj} & Objeto a almacenar en la cola. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondición}
+Tamanno incrementa en 1. 
+\end{DoxyPostcond}
+\Hypertarget{class_t_cola_a1da1ebe1721f664dbda45bafebca92a9}\index{TCola$<$ T $>$@{TCola$<$ T $>$}!esVacia@{esVacia}}
+\index{esVacia@{esVacia}!TCola$<$ T $>$@{TCola$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{esVacia()}{esVacia()}}
+{\footnotesize\ttfamily \label{class_t_cola_a1da1ebe1721f664dbda45bafebca92a9} 
+template$<$typename T$>$ \\
+bool \doxymbox{\hyperlink{class_t_cola}{TCola}}$<$ T $>$::\+es\+Vacia (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna un valor booleano si la cola está vacía o no. 
+
+\Hypertarget{class_t_cola_ac5af12393030355383026ce1e4641ee7}\index{TCola$<$ T $>$@{TCola$<$ T $>$}!obtenerTamanno@{obtenerTamanno}}
+\index{obtenerTamanno@{obtenerTamanno}!TCola$<$ T $>$@{TCola$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{obtenerTamanno()}{obtenerTamanno()}}
+{\footnotesize\ttfamily \label{class_t_cola_ac5af12393030355383026ce1e4641ee7} 
+template$<$typename T$>$ \\
+int \doxymbox{\hyperlink{class_t_cola}{TCola}}$<$ T $>$::\+obtener\+Tamanno (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna el tamaño de la cola. 
+
+\begin{DoxyReturn}{Devuelve}
+Valor entero que representa el tamaño de la cola. 
+\end{DoxyReturn}
+\Hypertarget{class_t_cola_a54f13768c2816d96a4a6afc107ac1591}\index{TCola$<$ T $>$@{TCola$<$ T $>$}!verFrente@{verFrente}}
+\index{verFrente@{verFrente}!TCola$<$ T $>$@{TCola$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{verFrente()}{verFrente()}}
+{\footnotesize\ttfamily \label{class_t_cola_a54f13768c2816d96a4a6afc107ac1591} 
+template$<$typename T$>$ \\
+T \& \doxymbox{\hyperlink{class_t_cola}{TCola}}$<$ T $>$::\+ver\+Frente (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Devuelve el elemento al frente de la cola. 
+
+\begin{DoxyPrecond}{Precondición}
+La cola no debe estar vacía. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Devuelve}
+Objeto genérico al frente de la cola. 
+\end{DoxyReturn}
+
+
+\label{class_t_cola_doc-variable-members}
+\Hypertarget{class_t_cola_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{class_t_cola_a5416a4796bdf534d767e4b152c083094}\index{TCola$<$ T $>$@{TCola$<$ T $>$}!fin@{fin}}
+\index{fin@{fin}!TCola$<$ T $>$@{TCola$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{fin}{fin}}
+{\footnotesize\ttfamily \label{class_t_cola_a5416a4796bdf534d767e4b152c083094} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{struct_t_cola_1_1_nodo}{Nodo}}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_cola}{TCola}}$<$ T $>$::\+fin\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Puntero al último nodo que ingresó a la cola. 
+
+\Hypertarget{class_t_cola_a90cd899155615ce4c2476da840883cfa}\index{TCola$<$ T $>$@{TCola$<$ T $>$}!frente@{frente}}
+\index{frente@{frente}!TCola$<$ T $>$@{TCola$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{frente}{frente}}
+{\footnotesize\ttfamily \label{class_t_cola_a90cd899155615ce4c2476da840883cfa} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{struct_t_cola_1_1_nodo}{Nodo}}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_cola}{TCola}}$<$ T $>$::\+frente\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Puntero al nodo de enfrente de la cola. 
+
+\Hypertarget{class_t_cola_a483919fc926182bd9a9ab46b6a5969a3}\index{TCola$<$ T $>$@{TCola$<$ T $>$}!tamanno@{tamanno}}
+\index{tamanno@{tamanno}!TCola$<$ T $>$@{TCola$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tamanno}{tamanno}}
+{\footnotesize\ttfamily \label{class_t_cola_a483919fc926182bd9a9ab46b6a5969a3} 
+template$<$typename T$>$ \\
+int \doxymbox{\hyperlink{class_t_cola}{TCola}}$<$ T $>$::\+tamanno\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tamaño de la cola. 
+
+
+
+La documentación de esta clase está generada del siguiente archivo:\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_t_cola_8hpp}{TCola.\+hpp}}\end{DoxyCompactItemize}

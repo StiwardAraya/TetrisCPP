@@ -1,0 +1,232 @@
+\doxysection{Referencia de la plantilla de la clase TLista\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\hypertarget{class_t_lista}{}\label{class_t_lista}\index{TLista$<$ T $>$@{TLista$<$ T $>$}}
+
+
+\texorpdfstring{$<$}{<} std::\+runtime\+\_\+error  
+
+
+
+
+{\ttfamily \+\#include $<$TLista.\+hpp$>$}
+
+\doxysubsubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_t_lista_1_1_nodo}{Nodo}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_t_lista_1_1_nodo}{Nodo} interno de la estructura, guarda el objeto y un puntero al nodo siguiente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_t_lista_a23328c915d152c490a2544b276ca101e}{TLista}} ()
+\begin{DoxyCompactList}\small\item\em Constructor genérico de la lista simplemente enlazada. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_t_lista_a0ee6f94f032385e7fd5520e27378d166}{\texorpdfstring{$\sim$}{\string~}\+TLista}} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la lista, libera la memoria de todos los nodos. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_t_lista_a74423e66f07239209177d74e38c46ff6}{es\+Vacia}} ()
+\begin{DoxyCompactList}\small\item\em Retorna un valor booleano si la lista está vacía o no. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_lista_acaac8ffe03ee4392167a2339c58586f1}{insertar}} (const T \&obj)
+\begin{DoxyCompactList}\small\item\em Inserta un nuevo nodo a la cabeza de la lista. \end{DoxyCompactList}\item 
+T \doxymbox{\hyperlink{class_t_lista_a611af683e1b1f472d9ae42c7821cfb11}{eliminar}} (int indice)
+\begin{DoxyCompactList}\small\item\em Elimina un nodo según su posición. \end{DoxyCompactList}\item 
+T \& \doxymbox{\hyperlink{class_t_lista_a792dc9fca796261d84bb06226ea19b18}{obtener}} (int indice)
+\begin{DoxyCompactList}\small\item\em Obtiene el valor de un nodo según su posición. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_t_lista_a848fbdb4be78f498d11939e85f2a9b9a}{obtener\+Tamanno}} () const
+\begin{DoxyCompactList}\small\item\em Retorna el tamaño de la lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_t_lista_1_1_nodo}{Nodo}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_lista_a0d0c78ca910e0bfecce6b73f52ebc12a}{cabeza}}
+\begin{DoxyCompactList}\small\item\em Puntero al primer nodo de la lista. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_t_lista_a9ce5c33ddaf88ba76a16f0ce3e1d5d0a}{tamanno}}
+\begin{DoxyCompactList}\small\item\em Tamaño de la lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\subsubsection*{template$<$typename T$>$\newline
+class TLista$<$ T $>$}
+\texorpdfstring{$<$}{<} std::\+runtime\+\_\+error 
+
+Estructura de datos simplemente enlazada. 
+\begin{DoxyTemplParams}{Parámetros de plantilla}
+{\em T} & tipo de dato genérico que la cola va a almacenar. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\label{class_t_lista_doc-constructors}
+\Hypertarget{class_t_lista_doc-constructors}
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{class_t_lista_a23328c915d152c490a2544b276ca101e}\index{TLista$<$ T $>$@{TLista$<$ T $>$}!TLista@{TLista}}
+\index{TLista@{TLista}!TLista$<$ T $>$@{TLista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{TLista()}{TLista()}}
+{\footnotesize\ttfamily \label{class_t_lista_a23328c915d152c490a2544b276ca101e} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{class_t_lista}{TLista}}$<$ T $>$::\+\+TLista (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor genérico de la lista simplemente enlazada. 
+
+\Hypertarget{class_t_lista_a0ee6f94f032385e7fd5520e27378d166}\index{TLista$<$ T $>$@{TLista$<$ T $>$}!````~TLista@{\texorpdfstring{$\sim$}{\string~}TLista}}
+\index{````~TLista@{\texorpdfstring{$\sim$}{\string~}TLista}!TLista$<$ T $>$@{TLista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}TLista()}{\string~TLista()}}
+{\footnotesize\ttfamily \label{class_t_lista_a0ee6f94f032385e7fd5520e27378d166} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{class_t_lista}{TLista}}$<$ T $>$::\+\texorpdfstring{$\sim$}{\string~}\doxymbox{\hyperlink{class_t_lista}{TLista}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor de la lista, libera la memoria de todos los nodos. 
+
+\begin{DoxyPostcond}{Postcondición}
+Reinicia todos los parámetros de la lista. 
+\end{DoxyPostcond}
+
+
+\label{class_t_lista_doc-func-members}
+\Hypertarget{class_t_lista_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_t_lista_a611af683e1b1f472d9ae42c7821cfb11}\index{TLista$<$ T $>$@{TLista$<$ T $>$}!eliminar@{eliminar}}
+\index{eliminar@{eliminar}!TLista$<$ T $>$@{TLista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{eliminar()}{eliminar()}}
+{\footnotesize\ttfamily \label{class_t_lista_a611af683e1b1f472d9ae42c7821cfb11} 
+template$<$typename T$>$ \\
+T \doxymbox{\hyperlink{class_t_lista}{TLista}}$<$ T $>$::\+eliminar (\begin{DoxyParamCaption}\item[{int}]{indice}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Elimina un nodo según su posición. 
+
+\begin{DoxyPrecond}{Precondición}
+La lista no puede estar vacía. 
+
+El indice no puede estar fuera de rango. 
+
+Si el indice es 0, elimina cabeza. 
+\end{DoxyPrecond}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std::\+runtime\+\_\+error} & Si la lista está vacía. \\
+\hline
+{\em std::\+out\+\_\+of\+\_\+range} & Si el indice está fuera de rango. \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parámetros}
+{\em indice} & Posición a eliminar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Objeto genérico que se encontraba en el nodo eliminado. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondición}
+Tamanno decrementa en 1. 
+\end{DoxyPostcond}
+\Hypertarget{class_t_lista_a74423e66f07239209177d74e38c46ff6}\index{TLista$<$ T $>$@{TLista$<$ T $>$}!esVacia@{esVacia}}
+\index{esVacia@{esVacia}!TLista$<$ T $>$@{TLista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{esVacia()}{esVacia()}}
+{\footnotesize\ttfamily \label{class_t_lista_a74423e66f07239209177d74e38c46ff6} 
+template$<$typename T$>$ \\
+bool \doxymbox{\hyperlink{class_t_lista}{TLista}}$<$ T $>$::\+es\+Vacia (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna un valor booleano si la lista está vacía o no. 
+
+\Hypertarget{class_t_lista_acaac8ffe03ee4392167a2339c58586f1}\index{TLista$<$ T $>$@{TLista$<$ T $>$}!insertar@{insertar}}
+\index{insertar@{insertar}!TLista$<$ T $>$@{TLista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insertar()}{insertar()}}
+{\footnotesize\ttfamily \label{class_t_lista_acaac8ffe03ee4392167a2339c58586f1} 
+template$<$typename T$>$ \\
+void \doxymbox{\hyperlink{class_t_lista}{TLista}}$<$ T $>$::\+insertar (\begin{DoxyParamCaption}\item[{const T \&}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserta un nuevo nodo a la cabeza de la lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em obj} & Objeto genérico a guardar en la lista. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondición}
+Tamanno incrementa en 1 
+\end{DoxyPostcond}
+\Hypertarget{class_t_lista_a792dc9fca796261d84bb06226ea19b18}\index{TLista$<$ T $>$@{TLista$<$ T $>$}!obtener@{obtener}}
+\index{obtener@{obtener}!TLista$<$ T $>$@{TLista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{obtener()}{obtener()}}
+{\footnotesize\ttfamily \label{class_t_lista_a792dc9fca796261d84bb06226ea19b18} 
+template$<$typename T$>$ \\
+T \& \doxymbox{\hyperlink{class_t_lista}{TLista}}$<$ T $>$::\+obtener (\begin{DoxyParamCaption}\item[{int}]{indice}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el valor de un nodo según su posición. 
+
+\begin{DoxyPrecond}{Precondición}
+La lista no puede estar vacía. 
+
+El indice no puede estar fuera de rango. 
+
+Si el indice es 0, retorna el valor de la cabeza. 
+\end{DoxyPrecond}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std::\+runtime\+\_\+error} & Si la lista está vacía. \\
+\hline
+{\em std::\+out\+\_\+of\+\_\+range} & Si el indice está fuera de rango. \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parámetros}
+{\em indice} & Posición a retornar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Puntero del objeto genérico que se encontraba en el nodo a retornar. 
+\end{DoxyReturn}
+\Hypertarget{class_t_lista_a848fbdb4be78f498d11939e85f2a9b9a}\index{TLista$<$ T $>$@{TLista$<$ T $>$}!obtenerTamanno@{obtenerTamanno}}
+\index{obtenerTamanno@{obtenerTamanno}!TLista$<$ T $>$@{TLista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{obtenerTamanno()}{obtenerTamanno()}}
+{\footnotesize\ttfamily \label{class_t_lista_a848fbdb4be78f498d11939e85f2a9b9a} 
+template$<$typename T$>$ \\
+int \doxymbox{\hyperlink{class_t_lista}{TLista}}$<$ T $>$::\+obtener\+Tamanno (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna el tamaño de la lista. 
+
+\begin{DoxyReturn}{Devuelve}
+Valor entero que representa el tamaño de la lista. 
+\end{DoxyReturn}
+
+
+\label{class_t_lista_doc-variable-members}
+\Hypertarget{class_t_lista_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{class_t_lista_a0d0c78ca910e0bfecce6b73f52ebc12a}\index{TLista$<$ T $>$@{TLista$<$ T $>$}!cabeza@{cabeza}}
+\index{cabeza@{cabeza}!TLista$<$ T $>$@{TLista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{cabeza}{cabeza}}
+{\footnotesize\ttfamily \label{class_t_lista_a0d0c78ca910e0bfecce6b73f52ebc12a} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{struct_t_lista_1_1_nodo}{Nodo}}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_lista}{TLista}}$<$ T $>$::\+cabeza\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Puntero al primer nodo de la lista. 
+
+\Hypertarget{class_t_lista_a9ce5c33ddaf88ba76a16f0ce3e1d5d0a}\index{TLista$<$ T $>$@{TLista$<$ T $>$}!tamanno@{tamanno}}
+\index{tamanno@{tamanno}!TLista$<$ T $>$@{TLista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tamanno}{tamanno}}
+{\footnotesize\ttfamily \label{class_t_lista_a9ce5c33ddaf88ba76a16f0ce3e1d5d0a} 
+template$<$typename T$>$ \\
+int \doxymbox{\hyperlink{class_t_lista}{TLista}}$<$ T $>$::\+tamanno\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tamaño de la lista. 
+
+
+
+La documentación de esta clase está generada del siguiente archivo:\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_t_lista_8hpp}{TLista.\+hpp}}\end{DoxyCompactItemize}

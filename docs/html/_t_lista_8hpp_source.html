@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Una_Tetris: Archivo de código fuente TLista.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Una_Tetris<span id="projectnumber">&#160;dev-0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">TLista.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_t_lista_8hpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;stdexcept&gt;</span>        </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_t_lista.html">   16</a></span><span class="keyword">class </span><a class="code hl_function" href="class_t_lista.html#a23328c915d152c490a2544b276ca101e">TLista</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="struct_t_lista_1_1_nodo.html">   23</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_t_lista_1_1_nodo.html">Nodo</a>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_t_lista_1_1_nodo.html#a8758e082cfd3ac66b1da6af013e04f4c">   24</a></span>        <a class="code hl_enumvalue" href="_pieza_8hpp.html#a666648ea0ca81f7fa393aeae0e1d4f07ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> <a class="code hl_variable" href="struct_t_lista_1_1_nodo.html#a8758e082cfd3ac66b1da6af013e04f4c">obj</a>;              </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_t_lista_1_1_nodo.html#a0cfad61034c4af6a33dbb3713e9c5b93">   25</a></span>        <a class="code hl_struct" href="struct_t_lista_1_1_nodo.html">Nodo</a>* <a class="code hl_variable" href="struct_t_lista_1_1_nodo.html#a0cfad61034c4af6a33dbb3713e9c5b93">siguiente</a>;    </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    };</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_t_lista.html#a0d0c78ca910e0bfecce6b73f52ebc12a">   28</a></span>    <a class="code hl_struct" href="struct_t_lista_1_1_nodo.html">Nodo</a>* <a class="code hl_variable" href="class_t_lista.html#a0d0c78ca910e0bfecce6b73f52ebc12a">cabeza</a>;           </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_t_lista.html#a9ce5c33ddaf88ba76a16f0ce3e1d5d0a">   29</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_lista.html#a9ce5c33ddaf88ba76a16f0ce3e1d5d0a">tamanno</a>;            </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_t_lista.html#a23328c915d152c490a2544b276ca101e">   36</a></span>    <a class="code hl_function" href="class_t_lista.html#a23328c915d152c490a2544b276ca101e">TLista</a>() : <a class="code hl_variable" href="class_t_lista.html#a0d0c78ca910e0bfecce6b73f52ebc12a">cabeza</a>(nullptr), <a class="code hl_variable" href="class_t_lista.html#a9ce5c33ddaf88ba76a16f0ce3e1d5d0a">tamanno</a>(0) {}</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_t_lista.html#a0ee6f94f032385e7fd5520e27378d166">   42</a></span>    <a class="code hl_function" href="class_t_lista.html#a0ee6f94f032385e7fd5520e27378d166">~TLista</a>() {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_struct" href="struct_t_lista_1_1_nodo.html">Nodo</a>* actual = <a class="code hl_variable" href="class_t_lista.html#a0d0c78ca910e0bfecce6b73f52ebc12a">cabeza</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">while</span>(actual){</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <a class="code hl_struct" href="struct_t_lista_1_1_nodo.html">Nodo</a>* aux = actual;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            actual = actual-&gt;<a class="code hl_variable" href="struct_t_lista_1_1_nodo.html#a0cfad61034c4af6a33dbb3713e9c5b93">siguiente</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keyword">delete</span> aux;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_variable" href="class_t_lista.html#a0d0c78ca910e0bfecce6b73f52ebc12a">cabeza</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_variable" href="class_t_lista.html#a9ce5c33ddaf88ba76a16f0ce3e1d5d0a">tamanno</a> = 0;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    </div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_t_lista.html#a74423e66f07239209177d74e38c46ff6">   56</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_t_lista.html#a74423e66f07239209177d74e38c46ff6">esVacia</a>() {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_t_lista.html#a0d0c78ca910e0bfecce6b73f52ebc12a">cabeza</a> == <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    </div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_t_lista.html#acaac8ffe03ee4392167a2339c58586f1">   65</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_t_lista.html#acaac8ffe03ee4392167a2339c58586f1">insertar</a>(<span class="keyword">const</span> T&amp; obj) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <a class="code hl_struct" href="struct_t_lista_1_1_nodo.html">Nodo</a>* nuevo = <span class="keyword">new</span> <a class="code hl_struct" href="struct_t_lista_1_1_nodo.html">Nodo</a>{obj, <span class="keyword">nullptr</span>};</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="class_t_lista.html#a74423e66f07239209177d74e38c46ff6">esVacia</a>()){</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <a class="code hl_variable" href="class_t_lista.html#a0d0c78ca910e0bfecce6b73f52ebc12a">cabeza</a> = nuevo;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <a class="code hl_variable" href="class_t_lista.html#a9ce5c33ddaf88ba76a16f0ce3e1d5d0a">tamanno</a>++;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        nuevo-&gt;<a class="code hl_variable" href="struct_t_lista_1_1_nodo.html#a0cfad61034c4af6a33dbb3713e9c5b93">siguiente</a> = <a class="code hl_variable" href="class_t_lista.html#a0d0c78ca910e0bfecce6b73f52ebc12a">cabeza</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <a class="code hl_variable" href="class_t_lista.html#a0d0c78ca910e0bfecce6b73f52ebc12a">cabeza</a> = nuevo;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_variable" href="class_t_lista.html#a9ce5c33ddaf88ba76a16f0ce3e1d5d0a">tamanno</a>++;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
+</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    </div>
+<div class="foldopen" id="foldopen00089" data-start="{" data-end="}">
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="class_t_lista.html#a611af683e1b1f472d9ae42c7821cfb11">   89</a></span>    <a class="code hl_enumvalue" href="_pieza_8hpp.html#a666648ea0ca81f7fa393aeae0e1d4f07ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> <a class="code hl_function" href="class_t_lista.html#a611af683e1b1f472d9ae42c7821cfb11">eliminar</a>(<span class="keywordtype">int</span> indice) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="class_t_lista.html#a74423e66f07239209177d74e38c46ff6">esVacia</a>()){</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;La lista esta vacia&quot;</span>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordflow">if</span>(indice &lt; 0 || indice &gt;= <a class="code hl_variable" href="class_t_lista.html#a9ce5c33ddaf88ba76a16f0ce3e1d5d0a">tamanno</a>){</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="keywordflow">throw</span> std::out_of_range(<span class="stringliteral">&quot;Indice fuera de rango&quot;</span>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordflow">if</span>(indice == 0){</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <a class="code hl_enumvalue" href="_pieza_8hpp.html#a666648ea0ca81f7fa393aeae0e1d4f07ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> obj = <a class="code hl_variable" href="class_t_lista.html#a0d0c78ca910e0bfecce6b73f52ebc12a">cabeza</a>-&gt;<a class="code hl_variable" href="struct_t_lista_1_1_nodo.html#a8758e082cfd3ac66b1da6af013e04f4c">obj</a>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <a class="code hl_struct" href="struct_t_lista_1_1_nodo.html">Nodo</a>* aux = <a class="code hl_variable" href="class_t_lista.html#a0d0c78ca910e0bfecce6b73f52ebc12a">cabeza</a>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <a class="code hl_variable" href="class_t_lista.html#a0d0c78ca910e0bfecce6b73f52ebc12a">cabeza</a> = <a class="code hl_variable" href="class_t_lista.html#a0d0c78ca910e0bfecce6b73f52ebc12a">cabeza</a>-&gt;<a class="code hl_variable" href="struct_t_lista_1_1_nodo.html#a0cfad61034c4af6a33dbb3713e9c5b93">siguiente</a>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            <span class="keyword">delete</span> aux;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <span class="keywordflow">return</span> obj;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <a class="code hl_struct" href="struct_t_lista_1_1_nodo.html">Nodo</a>* anterior = <a class="code hl_variable" href="class_t_lista.html#a0d0c78ca910e0bfecce6b73f52ebc12a">cabeza</a>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; indice - 1; i++){</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            anterior = anterior-&gt;<a class="code hl_variable" href="struct_t_lista_1_1_nodo.html#a0cfad61034c4af6a33dbb3713e9c5b93">siguiente</a>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <a class="code hl_struct" href="struct_t_lista_1_1_nodo.html">Nodo</a>* actual = anterior-&gt;<a class="code hl_variable" href="struct_t_lista_1_1_nodo.html#a0cfad61034c4af6a33dbb3713e9c5b93">siguiente</a>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <a class="code hl_enumvalue" href="_pieza_8hpp.html#a666648ea0ca81f7fa393aeae0e1d4f07ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> obj = actual-&gt;<a class="code hl_variable" href="struct_t_lista_1_1_nodo.html#a8758e082cfd3ac66b1da6af013e04f4c">obj</a>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        anterior-&gt;<a class="code hl_variable" href="struct_t_lista_1_1_nodo.html#a0cfad61034c4af6a33dbb3713e9c5b93">siguiente</a> = actual-&gt;<a class="code hl_variable" href="struct_t_lista_1_1_nodo.html#a0cfad61034c4af6a33dbb3713e9c5b93">siguiente</a>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keyword">delete</span> actual;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <a class="code hl_variable" href="class_t_lista.html#a9ce5c33ddaf88ba76a16f0ce3e1d5d0a">tamanno</a>--;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">return</span> obj;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
+</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    </div>
+<div class="foldopen" id="foldopen00129" data-start="{" data-end="}">
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="class_t_lista.html#a792dc9fca796261d84bb06226ea19b18">  129</a></span>    <a class="code hl_enumvalue" href="_pieza_8hpp.html#a666648ea0ca81f7fa393aeae0e1d4f07ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>&amp; <a class="code hl_function" href="class_t_lista.html#a792dc9fca796261d84bb06226ea19b18">obtener</a>(<span class="keywordtype">int</span> indice) {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="class_t_lista.html#a74423e66f07239209177d74e38c46ff6">esVacia</a>()){</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;La lista esta vacia&quot;</span>);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keywordflow">if</span>(indice &lt; 0 || indice &gt;= <a class="code hl_variable" href="class_t_lista.html#a9ce5c33ddaf88ba76a16f0ce3e1d5d0a">tamanno</a>){</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            <span class="keywordflow">throw</span> std::out_of_range(<span class="stringliteral">&quot;Indice fuera de rango&quot;</span>);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="keywordflow">if</span>(indice == 0){</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            <a class="code hl_enumvalue" href="_pieza_8hpp.html#a666648ea0ca81f7fa393aeae0e1d4f07ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>* obj = &amp;<a class="code hl_variable" href="class_t_lista.html#a0d0c78ca910e0bfecce6b73f52ebc12a">cabeza</a>-&gt;<a class="code hl_variable" href="struct_t_lista_1_1_nodo.html#a8758e082cfd3ac66b1da6af013e04f4c">obj</a>;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            <span class="keywordflow">return</span> *obj;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <a class="code hl_struct" href="struct_t_lista_1_1_nodo.html">Nodo</a>* actual = <a class="code hl_variable" href="class_t_lista.html#a0d0c78ca910e0bfecce6b73f52ebc12a">cabeza</a>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt;= indice - 1; i++){</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            actual = actual-&gt;<a class="code hl_variable" href="struct_t_lista_1_1_nodo.html#a0cfad61034c4af6a33dbb3713e9c5b93">siguiente</a>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <a class="code hl_enumvalue" href="_pieza_8hpp.html#a666648ea0ca81f7fa393aeae0e1d4f07ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>* obj = &amp;actual-&gt;<a class="code hl_variable" href="struct_t_lista_1_1_nodo.html#a8758e082cfd3ac66b1da6af013e04f4c">obj</a>;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="keywordflow">return</span> *obj;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    }</div>
+</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    </div>
+<div class="foldopen" id="foldopen00156" data-start="{" data-end="}">
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="class_t_lista.html#a848fbdb4be78f498d11939e85f2a9b9a">  156</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_t_lista.html#a848fbdb4be78f498d11939e85f2a9b9a">obtenerTamanno</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_t_lista.html#a9ce5c33ddaf88ba76a16f0ce3e1d5d0a">tamanno</a>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    }</div>
+</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>};</div>
+</div>
+<div class="ttc" id="a_pieza_8hpp_html_a666648ea0ca81f7fa393aeae0e1d4f07ab9ece18c950afbfa6b0fdbfa4ff731d3"><div class="ttname"><a href="_pieza_8hpp.html#a666648ea0ca81f7fa393aeae0e1d4f07ab9ece18c950afbfa6b0fdbfa4ff731d3">TipoPieza::T</a></div><div class="ttdeci">@ T</div><div class="ttdef"><b>Definición</b> Pieza.hpp:15</div></div>
+<div class="ttc" id="aclass_t_lista_html_a0d0c78ca910e0bfecce6b73f52ebc12a"><div class="ttname"><a href="class_t_lista.html#a0d0c78ca910e0bfecce6b73f52ebc12a">TLista::cabeza</a></div><div class="ttdeci">Nodo * cabeza</div><div class="ttdoc">Puntero al primer nodo de la lista.</div><div class="ttdef"><b>Definición</b> TLista.hpp:28</div></div>
+<div class="ttc" id="aclass_t_lista_html_a0ee6f94f032385e7fd5520e27378d166"><div class="ttname"><a href="class_t_lista.html#a0ee6f94f032385e7fd5520e27378d166">TLista::~TLista</a></div><div class="ttdeci">~TLista()</div><div class="ttdoc">Destructor de la lista, libera la memoria de todos los nodos.</div><div class="ttdef"><b>Definición</b> TLista.hpp:42</div></div>
+<div class="ttc" id="aclass_t_lista_html_a23328c915d152c490a2544b276ca101e"><div class="ttname"><a href="class_t_lista.html#a23328c915d152c490a2544b276ca101e">TLista::TLista</a></div><div class="ttdeci">TLista()</div><div class="ttdoc">Constructor genérico de la lista simplemente enlazada.</div><div class="ttdef"><b>Definición</b> TLista.hpp:36</div></div>
+<div class="ttc" id="aclass_t_lista_html_a611af683e1b1f472d9ae42c7821cfb11"><div class="ttname"><a href="class_t_lista.html#a611af683e1b1f472d9ae42c7821cfb11">TLista::eliminar</a></div><div class="ttdeci">T eliminar(int indice)</div><div class="ttdoc">Elimina un nodo según su posición.</div><div class="ttdef"><b>Definición</b> TLista.hpp:89</div></div>
+<div class="ttc" id="aclass_t_lista_html_a74423e66f07239209177d74e38c46ff6"><div class="ttname"><a href="class_t_lista.html#a74423e66f07239209177d74e38c46ff6">TLista::esVacia</a></div><div class="ttdeci">bool esVacia()</div><div class="ttdoc">Retorna un valor booleano si la lista está vacía o no.</div><div class="ttdef"><b>Definición</b> TLista.hpp:56</div></div>
+<div class="ttc" id="aclass_t_lista_html_a792dc9fca796261d84bb06226ea19b18"><div class="ttname"><a href="class_t_lista.html#a792dc9fca796261d84bb06226ea19b18">TLista::obtener</a></div><div class="ttdeci">T &amp; obtener(int indice)</div><div class="ttdoc">Obtiene el valor de un nodo según su posición.</div><div class="ttdef"><b>Definición</b> TLista.hpp:129</div></div>
+<div class="ttc" id="aclass_t_lista_html_a848fbdb4be78f498d11939e85f2a9b9a"><div class="ttname"><a href="class_t_lista.html#a848fbdb4be78f498d11939e85f2a9b9a">TLista::obtenerTamanno</a></div><div class="ttdeci">int obtenerTamanno() const</div><div class="ttdoc">Retorna el tamaño de la lista.</div><div class="ttdef"><b>Definición</b> TLista.hpp:156</div></div>
+<div class="ttc" id="aclass_t_lista_html_a9ce5c33ddaf88ba76a16f0ce3e1d5d0a"><div class="ttname"><a href="class_t_lista.html#a9ce5c33ddaf88ba76a16f0ce3e1d5d0a">TLista::tamanno</a></div><div class="ttdeci">int tamanno</div><div class="ttdoc">Tamaño de la lista.</div><div class="ttdef"><b>Definición</b> TLista.hpp:29</div></div>
+<div class="ttc" id="aclass_t_lista_html_acaac8ffe03ee4392167a2339c58586f1"><div class="ttname"><a href="class_t_lista.html#acaac8ffe03ee4392167a2339c58586f1">TLista::insertar</a></div><div class="ttdeci">void insertar(const T &amp;obj)</div><div class="ttdoc">Inserta un nuevo nodo a la cabeza de la lista.</div><div class="ttdef"><b>Definición</b> TLista.hpp:65</div></div>
+<div class="ttc" id="astruct_t_lista_1_1_nodo_html"><div class="ttname"><a href="struct_t_lista_1_1_nodo.html">TLista::Nodo</a></div><div class="ttdoc">Nodo interno de la estructura, guarda el objeto y un puntero al nodo siguiente.</div><div class="ttdef"><b>Definición</b> TLista.hpp:23</div></div>
+<div class="ttc" id="astruct_t_lista_1_1_nodo_html_a0cfad61034c4af6a33dbb3713e9c5b93"><div class="ttname"><a href="struct_t_lista_1_1_nodo.html#a0cfad61034c4af6a33dbb3713e9c5b93">TLista::Nodo::siguiente</a></div><div class="ttdeci">Nodo * siguiente</div><div class="ttdoc">Puntero al nodo siguiente.</div><div class="ttdef"><b>Definición</b> TLista.hpp:25</div></div>
+<div class="ttc" id="astruct_t_lista_1_1_nodo_html_a8758e082cfd3ac66b1da6af013e04f4c"><div class="ttname"><a href="struct_t_lista_1_1_nodo.html#a8758e082cfd3ac66b1da6af013e04f4c">TLista::Nodo::obj</a></div><div class="ttdeci">T obj</div><div class="ttdoc">Objeto genérico a almacenar en la lista.</div><div class="ttdef"><b>Definición</b> TLista.hpp:24</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
