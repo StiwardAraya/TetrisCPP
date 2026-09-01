@@ -30,6 +30,21 @@ private:
 	Nodo* actual;			///< Puntero indice a una posición de la lista.
 	int tamanno;			///< Cantidad de elementos en la lista.
 	
+	/**
+	* @brief Elimina todos los nodos posteriores a actual.
+	*/
+	void podarFuturo() {
+		Nodo* nodo = actual->siguiente;
+		while (nodo) {
+			Nodo* auxiliar = nodo;
+			nodo = nodo->siguiente;
+			delete auxiliar;
+			tamanno--;
+		}
+		actual->siguiente = nullptr;
+		cola = actual;
+	}
+	
 public:
 	
 	/**
@@ -62,31 +77,30 @@ public:
 	}
 		
 	/**
-	* @brief Inserta en la cabeza de la lista doble.
-	* @pre El objeto a insertar no puede ser nulo.
+	* @brief Inserta en la cola de la lista doble.
 	* @pre Si la lista está vacía inserta en cabeza y cola.
 	* @throw std::runtime_error Si el objeto es nulo.
 	* @param obj Objeto de tipo genérico a almacenar en la lista.
 	* @post Tamanno incrementa en 1.
 	*/
 	void insertar(const T& obj){
-		if (!obj) { 
-			throw std::runtime_error("El objeto a insertar no es válido(nullptr)");
-		}
-		
 		Nodo* nuevo = new Nodo{obj, nullptr, nullptr};
 		if(esVacia()){
 			cabeza = nuevo;
 			cola = nuevo;
-			actual = cabeza;
+			actual = nuevo;
 			tamanno++;
 			return;
 		}
 		
-		nuevo->siguiente = cabeza;
-		cabeza->anterior = nuevo;
-		cabeza = nuevo;
-		actual = cabeza;
+		if(actual != cola){
+			podarFuturo();
+		}
+		
+		nuevo->anterior = cola;
+		cola->siguiente = nuevo;
+		cola = nuevo;
+		actual = nuevo;
 		tamanno++;
 	}
 	

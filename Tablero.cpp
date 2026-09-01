@@ -54,7 +54,7 @@ void Tablero::fijarPieza(const Pieza& pieza) {
 		int fila = celda.first;
 		int columna = celda.second;
 		
-		Fila& filaObjetivo = filas.obtenerEnPosicion(fila);
+		Fila& filaObjetivo = filas.obtener(fila);
 		filaObjetivo.celdas[columna] = true;
 	}
 }

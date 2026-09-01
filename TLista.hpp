@@ -53,7 +53,7 @@ public:
 	/**
 	* @brief Retorna un valor booleano si la lista está vacía o no.
 	*/
-	bool esVacia() {
+	bool esVacia() const {
 		return cabeza == nullptr;
 	}
 	
@@ -127,6 +127,32 @@ public:
 	* @return Puntero del objeto genérico que se encontraba en el nodo a retornar.
 	*/
 	T& obtener(int indice) {
+		if(esVacia()){
+			throw std::runtime_error("La lista esta vacia");
+		}
+		
+		if(indice < 0 || indice >= tamanno){
+			throw std::out_of_range("Indice fuera de rango");
+		}
+		
+		if(indice == 0){
+			T* obj = &cabeza->obj;
+			return *obj;
+		}
+		
+		Nodo* actual = cabeza;
+		for(int i = 0; i <= indice - 1; i++){
+			actual = actual->siguiente;
+		}
+		
+		T* obj = &actual->obj;
+		return *obj;
+	}
+	
+	/**
+	* @brief Sobrecarga const para obtener, parche.
+	*/
+	const T& obtener(int indice) const {
 		if(esVacia()){
 			throw std::runtime_error("La lista esta vacia");
 		}

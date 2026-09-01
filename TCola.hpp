@@ -7,6 +7,7 @@
 #pragma once
 
 #include <stdexcept>		///< std::runtime_error
+#include <functional>		///< function<T>
 
 /**
 * @brief Estructura de datos genérica tipo FIFO.
@@ -126,4 +127,17 @@ public:
 		return tamanno;
 	}
 	
+	/**
+	* @brief Recorre la lista y ejecuta una acción
+	* sobre cada elemento de la cola.
+	*
+	* @return accion, función lambda a ejecutar en cada elemento.
+	*/
+	void recorrer(std::function<void(const T&)> accion) const {
+		Nodo* actual = frente;
+		while(actual){
+			accion(actual->obj);
+			actual = actual->siguiente;
+		}
+	}
 };

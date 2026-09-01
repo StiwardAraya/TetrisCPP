@@ -1,10 +1,10 @@
 #include "Pieza.hpp"
 
-const int Pieza FORMAS::FORMAS = {
+const int Pieza::FORMAS[7][4][4][2] = {
 	{
 		// Pieza I
-		{{0,-1},{0,0},{0,1},{0,2}}, // orientación 0 ->  _
-		{{-1,0},{0,0},{1,0},{2,0}}, // orientación 1 -> |
+		{{0,-1},{0,0},{0,1},{0,2}},
+		{{-1,0},{0,0},{1,0},{2,0}},
 		{{0,-1},{0,0},{0,1},{0,2}},
 		{{-1,0},{0,0},{1,0},{2,0}},
 	},
@@ -76,7 +76,7 @@ void Pieza::rotar() {
 }
 
 std::vector<std::pair<int, int>> Pieza::obtenerCeldasOcupadas() const {
-	obtenerCeldasEn(filaPivote, columnaPivote, orientacionActual);
+	return obtenerCeldasEn(filaPivote, columnaPivote, orientacionActual);
 }
 
 std::vector<std::pair<int, int>> Pieza::obtenerCeldasEn(int filaPivoteHipotetica, int columnaPivoteHipotetica, int orientacionHipotetica) const {
