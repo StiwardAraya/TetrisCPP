@@ -117,6 +117,10 @@ void Pieza::establecerPosicion(int fila, int columna){
 	columnaPivote = columna;
 }
 
+void Pieza::establecerOrientacion(int orientacion) {
+	orientacionActual = orientacion;
+}
+
 
 
 

@@ -19,7 +19,8 @@ enum class TipoMovimiento {
 	MOVER_DERECHA,
 	ROTAR,
 	BAJAR,
-	COLOCAR
+	COLOCAR,
+	HOLD
 };
 
 /**

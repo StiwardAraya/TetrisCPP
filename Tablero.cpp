@@ -100,6 +100,15 @@ bool Tablero::obtenerCelda(int fila, int columna) const{
 	return filaObjetivo.celdas[columna];
 }
 
+void Tablero::cargarSnapshot(const std::vector<std::vector<bool>>& snapshot) {
+	for (int fila = 0; fila < ALTO; fila++) {
+		Fila& filaObjetivo = filas.obtenerEnPosicion(fila);
+		for (int columna = 0; columna < ANCHO; columna++) {
+			filaObjetivo.celdas[columna] = snapshot[fila][columna];
+		}
+	}
+}
+
 int Tablero::getAncho() const {
 	return ANCHO;
 }

@@ -91,6 +91,12 @@ public:
 	*/
 	bool obtenerCelda(int fila, int columna) const;
 	
+	/**
+	* @brief Carga en el tablero un snaptshot almacenado.
+	* @param snapshot: Estructura de un tablero anterior o almacenado en el historial.
+	*/
+	void cargarSnapshot(const std::vector<std::vector<bool>>& snapshot);
+	
 	int getAncho() const;		///< GETTER Ancho
 	int getAlto() const;		///< GETTER Alto
 };

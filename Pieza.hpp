@@ -76,4 +76,12 @@ public:
 	* @param columna: posicion vertical
 	*/
 	void establecerPosicion(int fila, int columna); 
+	
+	/**
+	* @brief Necesario para saltar a la orientación necesaria, sin pasar
+	* por todas las anteriores.
+	* @param orientación, indica cual de las 4 orientaciones se le asignará
+	* a la pieza.
+	*/
+	void establecerOrientacion(int orientacion);
 };
