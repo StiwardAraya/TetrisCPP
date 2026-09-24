@@ -21,7 +21,7 @@ private:
 	* @brief Nodo interno de la pila, contiene un objeto y un puntero al siguiente.
 	*/
 	struct Nodo{
-		T obj;				///< Objéto genérico
+		T obj;				///< Objeto genérico
 		Nodo* siguiente; 	///< Puntero al siguiente nodo de la pila
 	};
 	
