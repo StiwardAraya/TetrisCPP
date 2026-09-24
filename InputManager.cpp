@@ -48,6 +48,7 @@ InputManager::InputManager() : solicitudCierre(false) {
 
 void InputManager::actualizar(sf::RenderWindow& ventana) {
 	presionadoAnterior = presionadoActual;
+	
 	sf::Event evento;
 	while (ventana.pollEvent(evento)) {
 		if (evento.type == sf::Event::Closed) {
@@ -55,18 +56,27 @@ void InputManager::actualizar(sf::RenderWindow& ventana) {
 			
 		} else if (evento.type == sf::Event::KeyPressed) {
 			AccionMotor accion = traducirTecla(evento.key.code);
-			if(accion != AccionMotor::NINGUNA) {
+			if (accion != AccionMotor::NINGUNA) {
 				presionadoActual[static_cast<int>(accion)] = true;
-			} 
+			}
+			
 		} else if (evento.type == sf::Event::KeyReleased) {
 			AccionMotor accion = traducirTecla(evento.key.code);
-			if(accion != AccionMotor::NINGUNA) {
+			if (accion != AccionMotor::NINGUNA) {
 				presionadoActual[static_cast<int>(accion)] = false;
-			} 
+			}
+			
+		} else if (evento.type == sf::Event::TextEntered && capturandoTexto) {
+			if (evento.text.unicode == 8) {
+				if (!textoIngresado.empty()) {
+					textoIngresado.pop_back();
+				}
+			} else if (evento.text.unicode >= 32 && evento.text.unicode < 128) {
+				textoIngresado += static_cast<char>(evento.text.unicode);
+			}
 		}
 	}
 }
-
 bool InputManager::estaPresionado(AccionMotor accion) const {
 	return presionadoActual[static_cast<int>(accion)];
 }
@@ -78,4 +88,21 @@ bool InputManager::fuePresionado(AccionMotor accion) const {
 
 bool InputManager::seSolicitoCerrar() const {
 	return solicitudCierre;
+}
+
+void InputManager::iniciarCapturaDeTexto() {
+	capturandoTexto = true;
+	textoIngresado.clear();
+}
+
+void InputManager::detenerCapturaDeTexto() {
+	capturandoTexto = false;
+}
+
+const std::string& InputManager::obtenerTextoIngresado() const {
+	return textoIngresado;
+}
+
+void InputManager::limpiarTextoIngresado() {
+	textoIngresado.clear();
 }

@@ -39,6 +39,8 @@ private:
 	std::array<bool, CANTIDAD_ACCIONES> presionadoActual;	///< Acciones presionadas en el momento
 	std::array<bool, CANTIDAD_ACCIONES> presionadoAnterior; ///< Acciones presionadas anteriormente
 	bool solicitudCierre;									///< Flag para detectar el cierre del programa
+	std::string textoIngresado; 							///< Input de texto para capturar el nombre del jugador
+	bool capturandoTexto;									///< Bandera para identificar si se está ingresando texto
 	
 	/**
 	* @brief Traduce la tecla de entrada a una acción del motor.
@@ -79,5 +81,25 @@ public:
 	* @return Valor booleano indicando si se solicitó el cierre.
 	*/
 	bool seSolicitoCerrar() const;
+	
+	/**
+	* @brief Inicia la captura de texto ingresado por el usuario.
+	*/
+	void iniciarCapturaDeTexto();
+	
+	/**
+	* @brief Captura el texto ingresado por el usuario
+	*/
+	void detenerCapturaDeTexto();
+	
+	/**
+	* @brief retorna el texto ingresado por el usuario
+	*/
+	const std::string& obtenerTextoIngresado() const;
+	
+	/**
+	* @brief Reinicia el input de texto
+	*/
+	void limpiarTextoIngresado();
 	
 };

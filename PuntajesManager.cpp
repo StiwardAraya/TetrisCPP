@@ -65,7 +65,7 @@ void PuntajesManager::agregarPuntaje(const std::string& nombre, int puntaje) {
 	
 	if (registros.size() > 10) {
 		Ordenamiento::ordenQuickSort(registros);
-		registros.resize(10);
+		registros.erase(registros.begin() + 10, registros.end());
 	}
 	
 	guardarEnArchivo();
