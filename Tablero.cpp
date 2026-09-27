@@ -39,7 +39,7 @@ bool Tablero::hayColision(const Pieza& pieza, int filaHipotetica, int columnaHip
 			return true;
 		}
 		
-		if(!obtenerCelda(fila, columna)){
+		if(obtenerCelda(fila, columna)){
 			return true;
 		}
 	}
