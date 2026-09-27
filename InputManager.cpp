@@ -18,7 +18,7 @@ AccionMotor InputManager::traducirTecla(sf::Keyboard::Key tecla) const {
 		case sf::Keyboard::S:
 			return AccionMotor::ABAJO;
 		
-		case sf::Keyboard::Insert:
+		case sf::Keyboard::E:
 			return AccionMotor::CONFIRMAR;
 		
 		case sf::Keyboard::Escape:

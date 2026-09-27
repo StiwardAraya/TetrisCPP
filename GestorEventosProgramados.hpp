@@ -32,4 +32,9 @@ public:
 	* @brief Actualiza el tiempo actual
 	*/
 	void actualizar(float deltaTime);
+	
+	/**
+	* @brief retorna cuanto tiempo ha transcurrido en la partida
+	*/
+	float tiempoActual() const;
 };

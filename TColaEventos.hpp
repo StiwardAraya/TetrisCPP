@@ -126,10 +126,6 @@ public:
 		delete auxiliar;
 		tamanno--;
 		
-		if(!frente){
-			fin = nullptr;
-		}
-		
 		return obj;
 	}
 	

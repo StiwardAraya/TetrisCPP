@@ -37,22 +37,22 @@ public:
 
 	/**
 	* @brief Dibuja un rectangulo en la ventana principal empezando en las coordenadas x e y
-	* indicadas hasta un ancho y un alto, usando el color tambi√©n indicado.
-	* @param x: Posici√≥n horizontal de inicio del rectangulo.
-	* @param y: Posici√≥n vertical de inicio del rectangulo.
-	* @param ancho: Posici√≥n horizontal de final del rect√°ngulo.
-	* @param alto: Posici√≥n vertical de final del rect√°ngulo.
-	* @param color: Color de relleno del rect√°ngulo
+	* indicadas hasta un ancho y un alto, usando el color tambiÈn indicado.
+	* @param x: PosiciÛn horizontal de inicio del rectangulo.
+	* @param y: PosiciÛn vertical de inicio del rectangulo.
+	* @param ancho: PosiciÛn horizontal de final del rect·ngulo.
+	* @param alto: PosiciÛn vertical de final del rect·ngulo.
+	* @param color: Color de relleno del rect·ngulo
 	*/
 	void dibujarRectangulo(float x, float y, float ancho, float alto, sf::Color color);
 
 	/**
 	* @brief Dibuja texto en la ventana principal iniciando en las posiciones x e y
-	* usando el color tambi√©n indicado.
+	* usando el color tambiÈn indicado.
 	* @param texto: Texto a dibujar en la ventana
-	* @param x: Posici√≥n horizontal de inicio del texto
-	* @param y: Posici√≥n vertical de inicio del texto.
-	* @param tamanno: Tama√±o del texto en pixeles.
+	* @param x: PosiciÛn horizontal de inicio del texto
+	* @param y: PosiciÛn vertical de inicio del texto.
+	* @param tamanno: TamaÒo del texto en pixeles.
 	* @param color: Color del texto.
 	*/
 	void dibujarTexto(const std::string& texto, float x, float y, unsigned int tamanno, sf::Color color);
@@ -60,10 +60,10 @@ public:
 	/**
 	* @brief Dibuja una linea en la ventana principal desde las posiciones x1 e y1 hasta
 	* las posiciones x2 e y2, usando el color indicado.
-	* @param x1: Posici√≥n horizontal de inicio de la linea.
-	* @param y1: Posici√≥n vertical de inicio de la linea.
-	* @param x2: Posici√≥n horizontal de final de la linea.
-	* @param y2: Posici√≥n vertical de final de la linea.
+	* @param x1: PosiciÛn horizontal de inicio de la linea.
+	* @param y1: PosiciÛn vertical de inicio de la linea.
+	* @param x2: PosiciÛn horizontal de final de la linea.
+	* @param y2: PosiciÛn vertical de final de la linea.
 	* @param color: Color de la linea.
 	*/
 	void dibujarLinea(float x1, float y1, float x2, float y2, sf::Color color);
@@ -76,8 +76,8 @@ public:
 	sf::RenderWindow& obtenerVentana();
 
 	/**
-	* @brief Revisa si la ventana est√° abierta y disponible.
-	* @return Valor booleano indicando si la ventana est√° abierta.
+	* @brief Revisa si la ventana est· abierta y disponible.
+	* @return Valor booleano indicando si la ventana est· abierta.
 	*/
 	bool estaAbierta() const;
 };

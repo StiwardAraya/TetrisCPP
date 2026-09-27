@@ -8,6 +8,10 @@ void GestorEventosProgramados::programarEvento(float momento, std::function<void
 	eventos.programarEvento(efecto, momento);
 }
 
+float GestorEventosProgramados::tiempoActual() const {
+	return tiempoTranscurrido;
+}
+
 void GestorEventosProgramados::actualizar(float deltaTime) {
 	tiempoTranscurrido += deltaTime;
 	
