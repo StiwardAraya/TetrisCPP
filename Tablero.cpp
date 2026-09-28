@@ -76,7 +76,7 @@ void Tablero::limpiarFilas(const std::vector<int>& indices) {
 	std::vector<int> indicesDescendente = indices;
 	
 	for(size_t i = 0; i < indicesDescendente.size(); i++) {
-		for(size_t j = 0; j < indicesDescendente.size(); j++) {
+		for(size_t j = i+1; j < indicesDescendente.size(); j++) {
 			if(indicesDescendente[j] > indicesDescendente[i]){
 				std::swap(indicesDescendente[j], indicesDescendente[i]);
 			}

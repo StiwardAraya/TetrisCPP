@@ -40,4 +40,11 @@ public:
 	* @param pieza: Pieza a guardar en la pila.
 	*/
 	void guardar(const Pieza& pieza);
+
+	/**
+	* @brief Consulta la ultima pieza guardada sin desapilarla.
+	* @pre hayPiezaGuardada() debe ser true.
+	* @return Referencia a la pieza en el tope de la pila.
+	*/
+	const Pieza& verGuardada() const;
 };

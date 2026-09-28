@@ -52,7 +52,7 @@ const int Pieza::FORMAS[7][4][4][2] = {
 	}
 };
 
-Pieza::Pieza(TipoPieza tipoInicial) : tipo(tipoInicial), filaPivote(0), columnaPivote(4), orientacionActual(0){}
+Pieza::Pieza(TipoPieza tipoInicial) : tipo(tipoInicial), filaPivote(1), columnaPivote(4), orientacionActual(0){}
 
 void Pieza::moverIzquierda() {
 	columnaPivote--;
@@ -120,19 +120,3 @@ void Pieza::establecerPosicion(int fila, int columna){
 void Pieza::establecerOrientacion(int orientacion) {
 	orientacionActual = orientacion;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

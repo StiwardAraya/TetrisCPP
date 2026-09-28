@@ -38,6 +38,12 @@ enum class AccionJugador {
 */
 class EstadoJugando : public Estado {
 private:
+	static const float RETRASO_INICIAL_DAS;			///< Segundos sosteniendo antes de repetir el movimiento
+	static const float INTERVALO_REPETICION_DAS;	///< Segundos entre repeticiones tras el retraso inicial
+	int direccionHorizontalActiva;					///< -1 izquierda, 0 ninguna, 1 derecha
+	float tiempoSostenidoHorizontal;				///< Tiempo que lleva sostenida la dirección activa
+	float tiempoAcumuladoRepeticionH;				///< Acumulador para las repeticiones tras el retraso
+	
 	Tablero tablero;								///< Tablero de 20x10 celdas
 	Pieza piezaActual;								///< Pieza que está cayendo actualmente
 	ColaPiezas colaPiezas;							///< Bolsa de 7 piezas futuras

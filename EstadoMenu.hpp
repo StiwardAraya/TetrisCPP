@@ -97,6 +97,12 @@ public:
 	EstadoMenu(EstadosManager& estadosManager, const std::string& rutaArchivoPuntajes);
 	
 	/**
+	* @brief Sobreescritura del método de Estado,define que sucede cuando
+	* se entra al estado.
+	*/
+	void alEntrar() override;
+	
+	/**
 	* @brief Sobreescritura del método de Estado, maneja las entradas del jugador
 	* en el estado actual.
 	*/

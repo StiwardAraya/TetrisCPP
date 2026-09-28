@@ -7,13 +7,19 @@
 #include "EstadoGameOver.hpp"
 #include <string>
 
+const float EstadoJugando::RETRASO_INICIAL_DAS = 0.20f;
+const float EstadoJugando::INTERVALO_REPETICION_DAS = 0.06f;
+
 EstadoJugando::EstadoJugando(EstadosManager& estadosManager, const std::string& nombreJugador,
 							 PuntajesManager& puntajesManager)
-	: piezaActual(TipoPieza::I), // placeholder, se reemplaza abajo
+	: piezaActual(TipoPieza::I),
 	puntaje(0),
 	multiplicadorPuntaje(1),
 	tiempoAcumulado(0.0f),
 	intervaloCaida(1.0f),
+	direccionHorizontalActiva(0),
+	tiempoSostenidoHorizontal(0.0f),
+	tiempoAcumuladoRepeticionH(0.0f),
 	nombreJugador(nombreJugador),
 	estadosManager(estadosManager),
 	puntajesManager(puntajesManager) {
@@ -135,10 +141,10 @@ void EstadoJugando::generarNuevaPieza() {
 void EstadoJugando::ejecutarHold() {
 	if (hold.hayPiezaGuardada()) {
 		Pieza piezaGuardada = hold.obtenerGuardada();
-		hold.guardar(piezaActual);
+		hold.guardar(Pieza(piezaActual.getTipoPieza()));
 		piezaActual = piezaGuardada;
 	} else {
-		hold.guardar(piezaActual);
+		hold.guardar(Pieza(piezaActual.getTipoPieza()));
 		piezaActual = colaPiezas.obtenerSiguiente();
 	}
 	
@@ -167,11 +173,19 @@ void EstadoJugando::verificarFinDeJuego() {
 }
 
 void EstadoJugando::manejarEntrada(InputManager& entradas) {
-	if (entradas.estaPresionado(AccionMotor::IZQUIERDA)) {
+	if (entradas.fuePresionado(AccionMotor::IZQUIERDA)) {
 		intentarMover(0, -1);
-	}
-	if (entradas.estaPresionado(AccionMotor::DERECHA)) {
+		direccionHorizontalActiva = -1;
+		tiempoSostenidoHorizontal = 0.0f;
+		tiempoAcumuladoRepeticionH = 0.0f;
+	} else if (entradas.fuePresionado(AccionMotor::DERECHA)) {
 		intentarMover(0, 1);
+		direccionHorizontalActiva = 1;
+		tiempoSostenidoHorizontal = 0.0f;
+		tiempoAcumuladoRepeticionH = 0.0f;
+	} else if (!entradas.estaPresionado(AccionMotor::IZQUIERDA) &&
+			   !entradas.estaPresionado(AccionMotor::DERECHA)) {
+		direccionHorizontalActiva = 0;
 	}
 	if (entradas.estaPresionado(AccionMotor::ABAJO)) {
 		intentarMover(1, 0);
@@ -201,6 +215,17 @@ void EstadoJugando::manejarEntrada(InputManager& entradas) {
 void EstadoJugando::actualizar(float deltaTime) {
 	gestorEventos.actualizar(deltaTime);
 	
+	if (direccionHorizontalActiva != 0) {
+		tiempoSostenidoHorizontal += deltaTime;
+		if (tiempoSostenidoHorizontal >= RETRASO_INICIAL_DAS) {
+			tiempoAcumuladoRepeticionH += deltaTime;
+			while (tiempoAcumuladoRepeticionH >= INTERVALO_REPETICION_DAS) {
+				tiempoAcumuladoRepeticionH -= INTERVALO_REPETICION_DAS;
+				intentarMover(0, direccionHorizontalActiva);
+			}
+		}
+	}
+	
 	tiempoAcumulado += deltaTime;
 	
 	if (tiempoAcumulado >= intervaloCaida) {
@@ -213,24 +238,78 @@ void EstadoJugando::actualizar(float deltaTime) {
 }
 
 void EstadoJugando::dibujar(Graficador& graficador) {
-	const float TAMANO_CELDA = 20.0f;
-	
+	const float TAMANO_CELDA = 30.0f;
+	const float TAMANO_CELDA_PREVIA = 22.0f;
+	const float ANCHO_TABLERO_PX = tablero.getAncho() * TAMANO_CELDA;
+	const float ALTO_TABLERO_PX = tablero.getAlto() * TAMANO_CELDA;
+	const float ORIGEN_X = (graficador.getAnchoLogico() - ANCHO_TABLERO_PX) / 2.0f;
+	const float ORIGEN_Y = (graficador.getAltoLogico() - ALTO_TABLERO_PX) / 2.0f;
+	const float SEPARACION = 30.0f;
+	const float ANCHO_PANEL = 170.0f;
+	const float X_PANEL_IZQ = ORIGEN_X - SEPARACION - ANCHO_PANEL;
+	const float X_PANEL_DER = ORIGEN_X + ANCHO_TABLERO_PX + SEPARACION;
+	const sf::Color COLOR_ETIQUETA(150, 150, 190);
+
+	// Tablero
+	graficador.dibujarFondoTablero(ORIGEN_X, ORIGEN_Y, tablero.getAncho(), tablero.getAlto(), TAMANO_CELDA);
+
 	for (int fila = 0; fila < tablero.getAlto(); fila++) {
 		for (int columna = 0; columna < tablero.getAncho(); columna++) {
 			if (tablero.obtenerCelda(fila, columna)) {
-				graficador.dibujarRectangulo(
-											 columna * TAMANO_CELDA, fila * TAMANO_CELDA,
-											 TAMANO_CELDA, TAMANO_CELDA, sf::Color::Cyan);
+				graficador.dibujarBloque(ORIGEN_X + columna * TAMANO_CELDA, ORIGEN_Y + fila * TAMANO_CELDA,
+										 TAMANO_CELDA, Graficador::colorBloqueFijado());
 			}
 		}
 	}
-	
+
+	sf::Color colorPieza = Graficador::colorDePieza(piezaActual.getTipoPieza());
 	std::vector<std::pair<int, int>> celdasPieza = piezaActual.obtenerCeldasOcupadas();
 	for (const auto& celda : celdasPieza) {
-		graficador.dibujarRectangulo(
-									 celda.second * TAMANO_CELDA, celda.first * TAMANO_CELDA,
-									 TAMANO_CELDA, TAMANO_CELDA, sf::Color::Yellow);
+		graficador.dibujarBloque(ORIGEN_X + celda.second * TAMANO_CELDA, ORIGEN_Y + celda.first * TAMANO_CELDA,
+								 TAMANO_CELDA, colorPieza);
 	}
-	
-	graficador.dibujarTexto("Puntaje: " + std::to_string(puntaje), 220, 10, 18, sf::Color::White);
+
+	// Panel izquierdo: hold, jugador y controles
+	const float ALTO_PANEL_HOLD = 140.0f;
+	graficador.dibujarPanel(X_PANEL_IZQ, ORIGEN_Y, ANCHO_PANEL, ALTO_PANEL_HOLD, "HOLD");
+	if (hold.hayPiezaGuardada()) {
+		graficador.dibujarVistaPreviaPieza(hold.verGuardada().getTipoPieza(),
+										   X_PANEL_IZQ + ANCHO_PANEL / 2.0f, ORIGEN_Y + 85.0f, TAMANO_CELDA_PREVIA);
+	}
+
+	const float Y_PANEL_JUGADOR = ORIGEN_Y + ALTO_PANEL_HOLD + SEPARACION;
+	graficador.dibujarPanel(X_PANEL_IZQ, Y_PANEL_JUGADOR, ANCHO_PANEL, 80.0f, "JUGADOR");
+	graficador.dibujarTextoCentrado(nombreJugador, X_PANEL_IZQ + ANCHO_PANEL / 2.0f,
+									Y_PANEL_JUGADOR + 42.0f, 20, sf::Color::White);
+
+	const float Y_PANEL_CONTROLES = Y_PANEL_JUGADOR + 80.0f + SEPARACION;
+	const int CANTIDAD_CONTROLES = 7;
+	const std::string CONTROLES[CANTIDAD_CONTROLES] = {
+		"<- ->  Mover", "Arriba Rotar", "Abajo  Bajar", "C      Hold", "Z      Deshacer", "X      Rehacer", "P      Pausa"
+	};
+	graficador.dibujarPanel(X_PANEL_IZQ, Y_PANEL_CONTROLES, ANCHO_PANEL, 230.0f, "CONTROLES");
+	for (int i = 0; i < CANTIDAD_CONTROLES; i++) {
+		graficador.dibujarTexto(CONTROLES[i], X_PANEL_IZQ + 14.0f, Y_PANEL_CONTROLES + 45.0f + i * 25.0f,
+								16, COLOR_ETIQUETA);
+	}
+
+	// Panel derecho: siguientes piezas y puntaje
+	const int CANTIDAD_PROXIMAS = 3;
+	const float ALTO_PANEL_SIGUIENTES = 330.0f;
+	graficador.dibujarPanel(X_PANEL_DER, ORIGEN_Y, ANCHO_PANEL, ALTO_PANEL_SIGUIENTES, "SIGUIENTES");
+	std::vector<Pieza> proximas = colaPiezas.verProximas(CANTIDAD_PROXIMAS);
+	for (size_t i = 0; i < proximas.size(); i++) {
+		graficador.dibujarVistaPreviaPieza(proximas[i].getTipoPieza(), X_PANEL_DER + ANCHO_PANEL / 2.0f,
+										   ORIGEN_Y + 95.0f + static_cast<float>(i) * 90.0f, TAMANO_CELDA_PREVIA);
+	}
+
+	const float Y_PANEL_PUNTAJE = ORIGEN_Y + ALTO_PANEL_SIGUIENTES + SEPARACION;
+	graficador.dibujarPanel(X_PANEL_DER, Y_PANEL_PUNTAJE, ANCHO_PANEL, 110.0f, "PUNTAJE");
+	graficador.dibujarTextoCentrado(std::to_string(puntaje), X_PANEL_DER + ANCHO_PANEL / 2.0f,
+									Y_PANEL_PUNTAJE + 42.0f, 32, sf::Color::White);
+	if (multiplicadorPuntaje > 1) {
+		graficador.dibujarTextoCentrado("PUNTOS x" + std::to_string(multiplicadorPuntaje),
+										X_PANEL_DER + ANCHO_PANEL / 2.0f, Y_PANEL_PUNTAJE + 82.0f,
+										16, sf::Color(245, 215, 0));
+	}
 }

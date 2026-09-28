@@ -110,41 +110,88 @@ void EstadoMenu::manejarEntradaTablaPuntajes(InputManager& entradas) {
 void EstadoMenu::dibujarPrincipal(Graficador& graficador) const {
 	const std::string opciones[CANTIDAD_OPCIONES_PRINCIPAL] = {"Jugar", "Ver puntajes", "Salir"};
 	
-	graficador.dibujarTexto("TETRIS", 220, 40, 32, sf::Color::White);
-	
-	for (int i = 0; i < CANTIDAD_OPCIONES_PRINCIPAL; i++) {
-		sf::Color color = (i == opcionSeleccionada) ? sf::Color::Yellow : sf::Color::White;
-		graficador.dibujarTexto(opciones[i], 240, 150 + i * 40, 22, color);
+	const float CENTRO_X = graficador.getAnchoLogico() / 2.0f;
+	const TipoPieza TIPOS_TITULO[] = {
+		TipoPieza::T, TipoPieza::I, TipoPieza::Z, TipoPieza::L, TipoPieza::O, TipoPieza::S, TipoPieza::J
+	};
+
+	for (int i = 0; i < 7; i++) {
+		graficador.dibujarVistaPreviaPieza(TIPOS_TITULO[i], CENTRO_X - 330.0f + i * 110.0f, 90.0f, 22.0f);
 	}
+	graficador.dibujarTextoCentrado("TETRIS", CENTRO_X, 150.0f, 96, sf::Color::White);
+
+	graficador.dibujarPanel(CENTRO_X - 170.0f, 330.0f, 340.0f, 210.0f);
+	for (int i = 0; i < CANTIDAD_OPCIONES_PRINCIPAL; i++) {
+		bool seleccionada = (i == opcionSeleccionada);
+		sf::Color color = seleccionada ? sf::Color(245, 215, 0) : sf::Color::White;
+		std::string texto = seleccionada ? "> " + opciones[i] + " <" : opciones[i];
+		graficador.dibujarTextoCentrado(texto, CENTRO_X, 360.0f + i * 55.0f, 34, color);
+	}
+
+	graficador.dibujarTextoCentrado("Flechas: elegir     E: confirmar", CENTRO_X, 620.0f, 18, sf::Color(150, 150, 190));
 }
 
 void EstadoMenu::dibujarIngresoNombre(Graficador& graficador) const {
-	graficador.dibujarTexto("Ingresa tu nombre:", 180, 100, 22, sf::Color::White);
-	graficador.dibujarTexto(textoEnEdicion, 180, 140, 22, sf::Color::Yellow);
-	
+	const float CENTRO_X = graficador.getAnchoLogico() / 2.0f;
+
+	graficador.dibujarTextoCentrado("Ingresa tu nombre", CENTRO_X, 220.0f, 40, sf::Color::White);
+	graficador.dibujarPanel(CENTRO_X - 220.0f, 300.0f, 440.0f, 70.0f);
+	graficador.dibujarTextoCentrado(textoEnEdicion + "_", CENTRO_X, 314.0f, 36, sf::Color(245, 215, 0));
+
 	if (!mensajeError.empty()) {
-		graficador.dibujarTexto(mensajeError, 100, 200, 16, sf::Color::Red);
+		graficador.dibujarTextoCentrado(mensajeError, CENTRO_X, 400.0f, 20, sf::Color(235, 55, 55));
 	}
+
+	graficador.dibujarTextoCentrado("E: comenzar     Esc: volver", CENTRO_X, 620.0f, 18, sf::Color(150, 150, 190));
 }
 
 void EstadoMenu::dibujarSeleccionOrden(Graficador& graficador) const {
-	graficador.dibujarTexto("Elegi el algoritmo de ordenamiento:", 100, 100, 20, sf::Color::White);
-	
-	sf::Color colorInsercion = (opcionSeleccionada == 0) ? sf::Color::Yellow : sf::Color::White;
-	sf::Color colorQuickSort = (opcionSeleccionada == 1) ? sf::Color::Yellow : sf::Color::White;
-	
-	graficador.dibujarTexto("Insercion  O(n^2)", 240, 160, 20, colorInsercion);
-	graficador.dibujarTexto("QuickSort  O(n log n)", 240, 200, 20, colorQuickSort);
+	const float CENTRO_X = graficador.getAnchoLogico() / 2.0f;
+
+	graficador.dibujarTextoCentrado("Algoritmo de ordenamiento", CENTRO_X, 200.0f, 40, sf::Color::White);
+
+	const std::string opciones[] = {"Insercion  O(n^2)", "QuickSort  O(n log n)"};
+	graficador.dibujarPanel(CENTRO_X - 230.0f, 290.0f, 460.0f, 150.0f);
+	for (int i = 0; i < 2; i++) {
+		bool seleccionada = (i == opcionSeleccionada);
+		sf::Color color = seleccionada ? sf::Color(245, 215, 0) : sf::Color::White;
+		std::string texto = seleccionada ? "> " + opciones[i] + " <" : opciones[i];
+		graficador.dibujarTextoCentrado(texto, CENTRO_X, 320.0f + i * 55.0f, 30, color);
+	}
+
+	graficador.dibujarTextoCentrado("Flechas: elegir     E: confirmar     Esc: volver", CENTRO_X, 620.0f, 18,
+									sf::Color(150, 150, 190));
 }
 
 void EstadoMenu::dibujarTablaPuntajes(Graficador& graficador) const {
-	graficador.dibujarTexto("Mejores puntajes:", 200, 30, 24, sf::Color::White);
-	
-	for (size_t i = 0; i < tablaMostrada.size(); i++) {
-		std::string linea = std::to_string(i + 1) + ". " + tablaMostrada[i].getNombre()
-			+ " - " + std::to_string(tablaMostrada[i].getPuntaje());
-		graficador.dibujarTexto(linea, 150, 80 + static_cast<float>(i) * 30, 18, sf::Color::White);
+	const float CENTRO_X = graficador.getAnchoLogico() / 2.0f;
+	const float ANCHO_PANEL = 480.0f;
+	const float X_PANEL = CENTRO_X - ANCHO_PANEL / 2.0f;
+
+	graficador.dibujarTextoCentrado("Mejores puntajes", CENTRO_X, 40.0f, 44, sf::Color::White);
+	graficador.dibujarPanel(X_PANEL, 120.0f, ANCHO_PANEL, 460.0f);
+
+	if (tablaMostrada.empty()) {
+		graficador.dibujarTextoCentrado("Aun no hay puntajes", CENTRO_X, 320.0f, 24, sf::Color(150, 150, 190));
 	}
+
+	for (size_t i = 0; i < tablaMostrada.size(); i++) {
+		float y = 140.0f + static_cast<float>(i) * 43.0f;
+		sf::Color color = (i == 0) ? sf::Color(245, 215, 0) : sf::Color::White;
+		graficador.dibujarTextoDerecha(std::to_string(i + 1) + ".", X_PANEL + 70.0f, y, 26, color);
+		graficador.dibujarTexto(tablaMostrada[i].getNombre(), X_PANEL + 90.0f, y, 26, color);
+		graficador.dibujarTextoDerecha(std::to_string(tablaMostrada[i].getPuntaje()), X_PANEL + ANCHO_PANEL - 30.0f,
+									   y, 26, color);
+	}
+
+	graficador.dibujarTextoCentrado("Esc: volver", CENTRO_X, 620.0f, 18, sf::Color(150, 150, 190));
+}
+
+void EstadoMenu::alEntrar() {
+	pantallaActual = PantallaMenu::PRINCIPAL;
+	opcionSeleccionada = 0;
+	mensajeError.clear();
+	textoEnEdicion.clear();
 }
 
 void EstadoMenu::manejarEntrada(InputManager& entradas) {

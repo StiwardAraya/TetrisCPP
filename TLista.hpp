@@ -100,6 +100,7 @@ public:
 			Nodo* aux = cabeza;
 			cabeza = cabeza->siguiente;
 			delete aux;
+			tamanno--;
 			return obj;
 		}
 		

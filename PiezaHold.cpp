@@ -13,3 +13,7 @@ Pieza PiezaHold::obtenerGuardada() {
 void PiezaHold::guardar(const Pieza& pieza) {
 	pila.apilar(pieza);
 }
+
+const Pieza& PiezaHold::verGuardada() const {
+	return pila.verTope();
+}

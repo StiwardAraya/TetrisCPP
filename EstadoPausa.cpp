@@ -27,11 +27,18 @@ void EstadoPausa::actualizar(float deltaTime) {
 }
 
 void EstadoPausa::dibujar(Graficador& graficador) {
-	graficador.dibujarTexto("PAUSA", 250, 100, 32, sf::Color::White);
-	
-	sf::Color colorReanudar = (opcionSeleccionada == 0) ? sf::Color::Yellow : sf::Color::White;
-	sf::Color colorSalir = (opcionSeleccionada == 1) ? sf::Color::Yellow : sf::Color::White;
-	
-	graficador.dibujarTexto("Reanudar", 240, 180, 22, colorReanudar);
-	graficador.dibujarTexto("Salir al menu", 240, 220, 22, colorSalir);
+	const float CENTRO_X = graficador.getAnchoLogico() / 2.0f;
+	const std::string opciones[CANTIDAD_OPCIONES] = {"Reanudar", "Salir al menu"};
+
+	graficador.dibujarTextoCentrado("PAUSA", CENTRO_X, 200.0f, 72, sf::Color::White);
+
+	graficador.dibujarPanel(CENTRO_X - 190.0f, 320.0f, 380.0f, 150.0f);
+	for (int i = 0; i < CANTIDAD_OPCIONES; i++) {
+		bool seleccionada = (i == opcionSeleccionada);
+		sf::Color color = seleccionada ? sf::Color(245, 215, 0) : sf::Color::White;
+		std::string texto = seleccionada ? "> " + opciones[i] + " <" : opciones[i];
+		graficador.dibujarTextoCentrado(texto, CENTRO_X, 350.0f + i * 55.0f, 32, color);
+	}
+
+	graficador.dibujarTextoCentrado("Flechas: elegir     E: confirmar", CENTRO_X, 620.0f, 18, sf::Color(150, 150, 190));
 }
